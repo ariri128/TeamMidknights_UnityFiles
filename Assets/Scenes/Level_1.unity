@@ -40851,9 +40851,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 4
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!43 &510253430
 Mesh:
   m_ObjectHideFlags: 0
@@ -41078,9 +41079,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &514575747
 GameObject:
   m_ObjectHideFlags: 0
@@ -58900,7 +58902,7 @@ Transform:
   m_GameObject: {fileID: 705962493}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.38, y: -4.6, z: -18.31}
+  m_LocalPosition: {x: 22.38, y: -3.832, z: -18.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58920,9 +58922,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &706496668
 GameObject:
   m_ObjectHideFlags: 0
@@ -87094,7 +87097,7 @@ Transform:
   m_GameObject: {fileID: 1050218178}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.85, y: -4.6, z: 15.67}
+  m_LocalPosition: {x: -11.85, y: -3.832, z: 15.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87114,9 +87117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &1074839594
 GameObject:
   m_ObjectHideFlags: 0
@@ -88800,9 +88804,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 4
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &1102037258
 GameObject:
   m_ObjectHideFlags: 0
@@ -105534,9 +105539,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 4
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!43 &1416191307
 Mesh:
   m_ObjectHideFlags: 0
@@ -121687,7 +121693,7 @@ Transform:
   m_GameObject: {fileID: 1622605770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.52, y: -4.6, z: 18.2}
+  m_LocalPosition: {x: 25.52, y: -3.832, z: 18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121707,9 +121713,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!43 &1624525171
 Mesh:
   m_ObjectHideFlags: 0
@@ -125623,9 +125630,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!43 &1694366834
 Mesh:
   m_ObjectHideFlags: 0
@@ -140736,9 +140744,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &1897424466
 GameObject:
   m_ObjectHideFlags: 0
@@ -145107,9 +145116,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &1924083679
 GameObject:
   m_ObjectHideFlags: 0
@@ -150091,9 +150101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!43 &1960347724
 Mesh:
   m_ObjectHideFlags: 0
@@ -159837,7 +159848,7 @@ Transform:
   m_GameObject: {fileID: 2038505640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.04, y: -4.6, z: -21.27}
+  m_LocalPosition: {x: -14.04, y: -3.832, z: -21.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -159857,9 +159868,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 3
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!1 &2045701264
 GameObject:
   m_ObjectHideFlags: 0
@@ -164378,9 +164390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
   player: {fileID: 2705848}
-  guardCount: 2
+  guardCount: 4
   spawnRadius: 8
   navMeshSearchDistance: 4
+  verticalSpawnOffset: 0.9
 --- !u!43 &2111095754
 Mesh:
   m_ObjectHideFlags: 0
@@ -166160,6 +166173,18 @@ PrefabInstance:
     - target: {fileID: 86290453141060043, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939639795714699827, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
+      propertyPath: m_Height
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939639795714699827, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
+      propertyPath: m_Radius
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939639795714699827, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7395785232834445513, guid: e6d46a173d7c6409e872073c16229e37, type: 3}
       propertyPath: m_Name
