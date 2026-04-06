@@ -36,6 +36,11 @@ public class CameraController : MonoBehaviour
         pitch = angles.x;
 
         SnapCameraToTarget();
+
+        if (ObjectiveUpdateUI.Instance != null)
+        {
+            ObjectiveUpdateUI.Instance.ShowMessage("Find your way to the top floor!");
+        }
     }
 
     private void LateUpdate()
