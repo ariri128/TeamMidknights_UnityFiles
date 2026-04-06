@@ -26,9 +26,16 @@ public class CameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        if (target == null || visualRenderer == null)
+        {
+            return;
+        }
+
         Vector3 angles = transform.eulerAngles;
         yaw = angles.y;
         pitch = angles.x;
+
+        SnapCameraToTarget();
     }
 
     private void LateUpdate()
@@ -39,7 +46,16 @@ public class CameraController : MonoBehaviour
         }
 
         HandleMouseLook();
+        UpdateCameraPositionAndRotation(false);
+    }
 
+    private void SnapCameraToTarget()
+    {
+        UpdateCameraPositionAndRotation(true);
+    }
+
+    private void UpdateCameraPositionAndRotation(bool instant)
+    {
         Bounds bounds = visualRenderer.bounds;
         float characterHeight = bounds.size.y;
 
@@ -54,19 +70,28 @@ public class CameraController : MonoBehaviour
         Vector3 orbitOffset = orbitRotation * new Vector3(sideOffset, verticalOffset, -distance);
         Vector3 desiredPosition = focusPoint + orbitOffset;
 
-        transform.position = Vector3.SmoothDamp(
-            transform.position,
-            desiredPosition,
-            ref currentVelocity,
-            1f / moveSmoothness
-        );
+        Quaternion desiredRotation = Quaternion.LookRotation(focusPoint - desiredPosition);
 
-        Quaternion desiredRotation = Quaternion.LookRotation(focusPoint - transform.position);
-        transform.rotation = Quaternion.Slerp(
-            transform.rotation,
-            desiredRotation,
-            rotateSmoothness * Time.deltaTime
-        );
+        if (instant)
+        {
+            transform.position = desiredPosition;
+            transform.rotation = desiredRotation;
+        }
+        else
+        {
+            transform.position = Vector3.SmoothDamp(
+                transform.position,
+                desiredPosition,
+                ref currentVelocity,
+                1f / moveSmoothness
+            );
+
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                desiredRotation,
+                rotateSmoothness * Time.deltaTime
+            );
+        }
     }
 
     private void HandleMouseLook()
