@@ -23,6 +23,10 @@ public class GuardAI : MonoBehaviour
     private float damageTimer;
     private GuardState currentState;
 
+    private float normalSpeed;
+    private float normalAngularSpeed;
+    private float normalAcceleration;
+
     private enum GuardState
     {
         Patrol,
@@ -33,6 +37,10 @@ public class GuardAI : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        normalSpeed = agent.speed;
+        normalAngularSpeed = agent.angularSpeed;
+        normalAcceleration = agent.acceleration;
     }
 
     private void Start()
@@ -133,5 +141,19 @@ public class GuardAI : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void ApplySlow(float speedMultiplier)
+    {
+        agent.speed = normalSpeed * speedMultiplier;
+        agent.angularSpeed = normalAngularSpeed * speedMultiplier;
+        agent.acceleration = normalAcceleration * speedMultiplier;
+    }
+
+    public void RestoreNormalSpeed()
+    {
+        agent.speed = normalSpeed;
+        agent.angularSpeed = normalAngularSpeed;
+        agent.acceleration = normalAcceleration;
     }
 }
