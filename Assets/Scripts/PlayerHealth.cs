@@ -34,6 +34,11 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Damage taken. Player HP is now: " + currentHP);
 
+        if (ObjectiveUpdateUI.Instance != null)
+        {
+            ObjectiveUpdateUI.Instance.ShowMessage("Damage Taken. HP is now " + currentHP);
+        }
+
         if (currentHP <= 0)
         {
             Die();
@@ -71,6 +76,11 @@ public class PlayerHealth : MonoBehaviour
 
         currentHP = Mathf.Clamp(value, 0, maxHP);
         Debug.Log("HP restored to: " + currentHP);
+
+        if (ObjectiveUpdateUI.Instance != null)
+        {
+            ObjectiveUpdateUI.Instance.ShowMessage("HP restored to " + currentHP);
+        }
     }
 
     public bool IsDead()
