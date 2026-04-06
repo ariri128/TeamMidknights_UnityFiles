@@ -62,6 +62,22 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(LoadLoseSceneAfterDelay());
     }
 
+    public void SetHP(int value)
+    {
+        if (isDead)
+        {
+            return;
+        }
+
+        currentHP = Mathf.Clamp(value, 0, maxHP);
+        Debug.Log("HP restored to: " + currentHP);
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
     private IEnumerator LoadLoseSceneAfterDelay()
     {
         yield return new WaitForSeconds(loseDelay);
