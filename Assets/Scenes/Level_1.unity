@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 2705851}
   - component: {fileID: 2705850}
   - component: {fileID: 2705852}
+  - component: {fileID: 2705853}
   m_Layer: 0
   m_Name: PlayerRoot
   m_TagString: Untagged
@@ -223,10 +224,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9355c23fc344c868c549b03993a1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHP: 500
+  maxHP: 300
   loseDelay: 0.75
   loseLevelLoader: {fileID: 1670996905}
   cameraController: {fileID: 1087918638}
+--- !u!114 &2705853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15f9eb0a2cfa42b1ba8c610eb2249fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeRewind
+  rewindSeconds: 5
+  recordInterval: 0.1
 --- !u!1 &6586917
 GameObject:
   m_ObjectHideFlags: 0
