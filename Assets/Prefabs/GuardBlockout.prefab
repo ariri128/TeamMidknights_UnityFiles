@@ -347,8 +347,6 @@ GameObject:
   - component: {fileID: 86290453141060043}
   - component: {fileID: 4682738193851438669}
   - component: {fileID: 3939639795714699827}
-  - component: {fileID: -6906210929483124656}
-  - component: {fileID: -916422492074930746}
   m_Layer: 0
   m_Name: GuardBlockout
   m_TagString: Untagged
@@ -418,41 +416,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-6906210929483124656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7395785232834445513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f947b50a822642d0a52b3739c14dcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuardAI
-  player: {fileID: 0}
-  floorCenter: {x: 0, y: 0, z: 0}
-  floorPatrolRadius: 8
-  navMeshSearchDistance: 4
-  patrolWaitTime: 1.5
-  chaseRadius: 5
-  attackRadius: 1.2
-  losePlayerRadius: 7
-  damageAmount: 50
-  damageInterval: 1
---- !u!114 &-916422492074930746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7395785232834445513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731c79657dcfa45db86688f36f7bbb60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuardHealth
-  maxHP: 100
 --- !u!1 &8215667043655778815
 GameObject:
   m_ObjectHideFlags: 0
