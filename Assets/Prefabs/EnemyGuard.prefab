@@ -55,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.45464134, y: 1.0440662, z: 0.38134193}
-  m_Center: {x: -0.0035414696, y: 0.92911756, z: -0.04318905}
+  m_Size: {x: 0.8171649, y: 1.0440662, z: 0.49053574}
+  m_Center: {x: 0.0030105114, y: 0.92911756, z: -0.036636353}
 --- !u!195 &3295972347583605972
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   floorPatrolRadius: 8
   navMeshSearchDistance: 4
   patrolWaitTime: 1.5
-  chaseRadius: 5
+  chaseRadius: 7
   attackRadius: 1.2
   losePlayerRadius: 7
   damageAmount: 50
@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardHealth
   maxHP: 100
+  flashColor: {r: 1, g: 0, b: 0, a: 0.5}
+  flashDuration: 0.15
 --- !u!1001 &349920635359052891
 PrefabInstance:
   m_ObjectHideFlags: 0
