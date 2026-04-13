@@ -32286,7 +32286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 4
+  guardCount: 7
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -32336,7 +32336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -42125,7 +42125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -56086,7 +56086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -57063,7 +57063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 4
+  guardCount: 7
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -64988,7 +64988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 4
+  guardCount: 7
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -76595,7 +76595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -79000,7 +79000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -90146,7 +90146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 6
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -92475,7 +92475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -95006,7 +95006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -99951,7 +99951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 3
+  guardCount: 5
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -102114,7 +102114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSpawner
   guardPrefab: {fileID: 7286599129552975601, guid: 47476bdcc46578e4d8c36b20d3957ca9, type: 3}
   player: {fileID: 2705848}
-  guardCount: 4
+  guardCount: 7
   spawnRadius: 8
   navMeshSearchDistance: 4
   verticalSpawnOffset: 0.9
@@ -103494,6 +103494,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1087918635}
+    - target: {fileID: 4516939781425546592, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: attackRange
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5194275956727887941, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       propertyPath: cameraTransform
       value: 
