@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - WORLD_SPACE_UV: 0
-    - _Depth_Fade_Distance: 2.09
+    - _Depth_Fade_Distance: 0.98
     - _Horizon_Distance: 40
     - _Intersection_Foam_Cutoff: 1
     - _Intersection_Foam_Depth: 0.03
@@ -57,9 +57,10 @@ Material:
     - _Wave_Speed: 0
     - _Wave_Steepness: 0
     m_Colors:
+    - _Deep_Color: {r: 0, g: 0.333416, b: 0.6415094, a: 0.019607844}
     - _Horizon_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Intersection_Foam_Color: {r: 0.59033465, g: 0.9158765, b: 0.9339623, a: 1}
-    - _Shallow_Color: {r: 0, g: 1, b: 0.8781464, a: 0.43137255}
+    - _Shallow_Color: {r: 0, g: 1, b: 0.8781464, a: 0.68235296}
     - _Specular_Color: {r: 1, g: 1, b: 1, a: 0.1764706}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
