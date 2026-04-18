@@ -222,11 +222,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &58645597
@@ -631,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5854101068967016697, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 5854101068967016697, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8285,7 +8285,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 0.8
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -8338,7 +8338,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 0.8
       minScalar: 0
       maxCurve:
         serializedVersion: 2
