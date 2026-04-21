@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaterBender : MonoBehaviour
 {
+    /*
     [SerializeField] bool _update;
     [SerializeField] WaterBendingControll _WaterPrefab;
 
@@ -31,4 +32,5 @@ public class WaterBender : MonoBehaviour
         WaterBendingControll water = Instantiate(_WaterPrefab, transform.position, Quaternion.identity);
         water.WaterBend(target);
     }
+    */
 }
