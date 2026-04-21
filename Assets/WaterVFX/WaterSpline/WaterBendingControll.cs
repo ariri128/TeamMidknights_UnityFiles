@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SplineMesh;
+
 public class WaterBendingControll : MonoBehaviour
 {
+    /*
     [SerializeField] float _PointCount;
     [SerializeField] float _Radius;
     [SerializeField] float _HeightDelta;
@@ -139,4 +141,5 @@ public class WaterBendingControll : MonoBehaviour
         SplineNode node = new SplineNode(targetNodePosition, targetNodeDirection);
         _Spline.AddNode(node);
     }
+    */
 }
