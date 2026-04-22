@@ -57220,7 +57220,7 @@ Canvas:
   m_GameObject: {fileID: 759135252}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1087918635}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -75401,7 +75401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 5.1}
+  m_AnchoredPosition: {x: 0, y: 5.100006}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067042987
@@ -79884,7 +79884,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2978927336296625477, guid: aae6235ad3f02444ba5bed76187cc4be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1297639147}
   m_SourcePrefab: {fileID: 100100000, guid: aae6235ad3f02444ba5bed76187cc4be, type: 3}
 --- !u!1 &1171998103 stripped
 GameObject:
@@ -85102,6 +85105,26 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1297639142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2978927336296625477, guid: aae6235ad3f02444ba5bed76187cc4be, type: 3}
+  m_PrefabInstance: {fileID: 1167351542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297639147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297639142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09f09cc697304e13ba7c4059ecb48ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ManaRefill
+  interactionRange: 2.5
+  manaPerSecond: 20
+  player: {fileID: 2705848}
 --- !u!1001 &1299423253
 PrefabInstance:
   m_ObjectHideFlags: 0

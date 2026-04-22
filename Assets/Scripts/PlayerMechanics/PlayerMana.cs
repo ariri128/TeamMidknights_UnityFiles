@@ -73,4 +73,9 @@ public class PlayerMana : MonoBehaviour
             ObjectiveUpdateUI.Instance.ShowMessage("Out of mana. Refill it at the fountain.");
         }
     }
+
+    public bool IsFull()
+    {
+        return currentMana >= maxMana;
+    }
 }
