@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 5381435}
   - component: {fileID: 5381437}
   - component: {fileID: 5381436}
+  - component: {fileID: 5381438}
   m_Layer: 0
   m_Name: BridgePiece (5)
   m_TagString: Untagged
@@ -630,6 +631,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5381434}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &5381438
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &6586917
 GameObject:
@@ -850,6 +873,7 @@ GameObject:
   - component: {fileID: 12679948}
   - component: {fileID: 12679950}
   - component: {fileID: 12679949}
+  - component: {fileID: 12679951}
   m_Layer: 0
   m_Name: BridgePiece (1)
   m_TagString: Untagged
@@ -928,6 +952,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12679947}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &12679951
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12679947}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &15147937
 GameObject:
@@ -3790,6 +3836,7 @@ GameObject:
   - component: {fileID: 61814608}
   - component: {fileID: 61814610}
   - component: {fileID: 61814609}
+  - component: {fileID: 61814611}
   m_Layer: 0
   m_Name: BridgePiece (6)
   m_TagString: Untagged
@@ -3869,6 +3916,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61814607}
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &61814611
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61814607}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &62512507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,6 +3949,7 @@ GameObject:
   - component: {fileID: 62512508}
   - component: {fileID: 62512510}
   - component: {fileID: 62512509}
+  - component: {fileID: 62512511}
   m_Layer: 0
   m_Name: BridgePiece (5)
   m_TagString: Untagged
@@ -3958,6 +4028,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62512507}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &62512511
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62512507}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &63044637
 GameObject:
@@ -9909,6 +10001,7 @@ GameObject:
   - component: {fileID: 109660858}
   - component: {fileID: 109660860}
   - component: {fileID: 109660859}
+  - component: {fileID: 109660861}
   m_Layer: 0
   m_Name: BridgePiece (4)
   m_TagString: Untagged
@@ -9987,6 +10080,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109660857}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &109660861
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109660857}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &109772647
 PrefabInstance:
@@ -31394,6 +31509,7 @@ GameObject:
   - component: {fileID: 381402499}
   - component: {fileID: 381402501}
   - component: {fileID: 381402500}
+  - component: {fileID: 381402502}
   m_Layer: 0
   m_Name: BridgePiece (7)
   m_TagString: Untagged
@@ -31472,6 +31588,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381402498}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &381402502
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381402498}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &381749058
 PrefabInstance:
@@ -43220,6 +43358,7 @@ GameObject:
   - component: {fileID: 499109639}
   - component: {fileID: 499109641}
   - component: {fileID: 499109640}
+  - component: {fileID: 499109642}
   m_Layer: 0
   m_Name: BridgePiece (4)
   m_TagString: Untagged
@@ -43298,6 +43437,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499109638}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &499109642
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499109638}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &499523496
 GameObject:
@@ -51483,6 +51644,7 @@ GameObject:
   - component: {fileID: 578263116}
   - component: {fileID: 578263118}
   - component: {fileID: 578263117}
+  - component: {fileID: 578263119}
   m_Layer: 0
   m_Name: BridgePiece (9)
   m_TagString: Untagged
@@ -51562,6 +51724,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578263115}
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &578263119
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578263115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &579878646
 GameObject:
   m_ObjectHideFlags: 0
@@ -51573,6 +51757,7 @@ GameObject:
   - component: {fileID: 579878647}
   - component: {fileID: 579878649}
   - component: {fileID: 579878648}
+  - component: {fileID: 579878650}
   m_Layer: 0
   m_Name: BridgePiece (1)
   m_TagString: Untagged
@@ -51651,6 +51836,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579878646}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &579878650
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579878646}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!43 &580693046
 Mesh:
@@ -51898,6 +52105,7 @@ GameObject:
   - component: {fileID: 581622385}
   - component: {fileID: 581622387}
   - component: {fileID: 581622386}
+  - component: {fileID: 581622388}
   m_Layer: 0
   m_Name: BridgePiece (6)
   m_TagString: Untagged
@@ -51976,6 +52184,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581622384}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &581622388
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581622384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &581943375
 GameObject:
@@ -64111,6 +64341,7 @@ GameObject:
   - component: {fileID: 791797198}
   - component: {fileID: 791797200}
   - component: {fileID: 791797199}
+  - component: {fileID: 791797201}
   m_Layer: 0
   m_Name: BridgePiece (2)
   m_TagString: Untagged
@@ -64189,6 +64420,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791797197}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &791797201
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791797197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &801416126
 GameObject:
@@ -66301,6 +66554,7 @@ GameObject:
   - component: {fileID: 838969555}
   - component: {fileID: 838969557}
   - component: {fileID: 838969556}
+  - component: {fileID: 838969558}
   m_Layer: 0
   m_Name: BridgePiece (4)
   m_TagString: Untagged
@@ -66379,6 +66633,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838969554}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &838969558
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838969554}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &839383350
 PrefabInstance:
@@ -79701,6 +79977,7 @@ GameObject:
   - component: {fileID: 1019323111}
   - component: {fileID: 1019323113}
   - component: {fileID: 1019323112}
+  - component: {fileID: 1019323114}
   m_Layer: 0
   m_Name: BridgePiece (3)
   m_TagString: Untagged
@@ -79779,6 +80056,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019323110}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1019323114
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019323110}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &1019354413
 GameObject:
@@ -94088,6 +94387,7 @@ GameObject:
   - component: {fileID: 1298015711}
   - component: {fileID: 1298015713}
   - component: {fileID: 1298015712}
+  - component: {fileID: 1298015714}
   m_Layer: 0
   m_Name: BridgePiece (2)
   m_TagString: Untagged
@@ -94166,6 +94466,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298015710}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1298015714
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298015710}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1299423253
 PrefabInstance:
@@ -95715,6 +96037,7 @@ GameObject:
   - component: {fileID: 1324473879}
   - component: {fileID: 1324473881}
   - component: {fileID: 1324473880}
+  - component: {fileID: 1324473882}
   m_Layer: 0
   m_Name: BridgePiece (7)
   m_TagString: Untagged
@@ -95793,6 +96116,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324473878}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1324473882
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324473878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1327050111
 PrefabInstance:
@@ -96620,6 +96965,7 @@ GameObject:
   - component: {fileID: 1334474669}
   - component: {fileID: 1334474671}
   - component: {fileID: 1334474670}
+  - component: {fileID: 1334474672}
   m_Layer: 0
   m_Name: BridgePiece (8)
   m_TagString: Untagged
@@ -96698,6 +97044,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334474668}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1334474672
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334474668}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1334850838
 PrefabInstance:
@@ -116454,6 +116822,7 @@ GameObject:
   - component: {fileID: 1597745090}
   - component: {fileID: 1597745092}
   - component: {fileID: 1597745091}
+  - component: {fileID: 1597745093}
   m_Layer: 0
   m_Name: BridgePiece (3)
   m_TagString: Untagged
@@ -116532,6 +116901,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597745089}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1597745093
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597745089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1602478636
 PrefabInstance:
@@ -119082,6 +119473,7 @@ GameObject:
   - component: {fileID: 1657048447}
   - component: {fileID: 1657048449}
   - component: {fileID: 1657048448}
+  - component: {fileID: 1657048450}
   m_Layer: 0
   m_Name: BridgePiece (5)
   m_TagString: Untagged
@@ -119160,6 +119552,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657048446}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1657048450
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657048446}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &1657726035
 GameObject:
@@ -120891,6 +121305,7 @@ GameObject:
   - component: {fileID: 1685713019}
   - component: {fileID: 1685713021}
   - component: {fileID: 1685713020}
+  - component: {fileID: 1685713022}
   m_Layer: 0
   m_Name: BridgePiece (2)
   m_TagString: Untagged
@@ -120969,6 +121384,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685713018}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1685713022
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685713018}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!4 &1685890413 stripped
 Transform:
@@ -127208,6 +127645,7 @@ GameObject:
   - component: {fileID: 1732909383}
   - component: {fileID: 1732909385}
   - component: {fileID: 1732909384}
+  - component: {fileID: 1732909386}
   m_Layer: 0
   m_Name: BridgePiece (1)
   m_TagString: Untagged
@@ -127286,6 +127724,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732909382}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1732909386
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732909382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1734684098
 PrefabInstance:
@@ -128470,6 +128930,7 @@ GameObject:
   - component: {fileID: 1765162362}
   - component: {fileID: 1765162364}
   - component: {fileID: 1765162363}
+  - component: {fileID: 1765162365}
   m_Layer: 0
   m_Name: BridgePiece (8)
   m_TagString: Untagged
@@ -128548,6 +129009,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765162361}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1765162365
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765162361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1765884538
 PrefabInstance:
@@ -129540,6 +130023,7 @@ GameObject:
   - component: {fileID: 1773633173}
   - component: {fileID: 1773633175}
   - component: {fileID: 1773633174}
+  - component: {fileID: 1773633176}
   m_Layer: 0
   m_Name: BridgePiece (9)
   m_TagString: Untagged
@@ -129618,6 +130102,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773633172}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1773633176
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773633172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &1775940323
 GameObject:
@@ -141312,6 +141818,7 @@ GameObject:
   - component: {fileID: 1906479929}
   - component: {fileID: 1906479931}
   - component: {fileID: 1906479930}
+  - component: {fileID: 1906479932}
   m_Layer: 0
   m_Name: BridgePiece (3)
   m_TagString: Untagged
@@ -141390,6 +141897,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906479928}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1906479932
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906479928}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1909055959
 PrefabInstance:
@@ -145996,6 +146525,7 @@ GameObject:
   - component: {fileID: 1963167976}
   - component: {fileID: 1963167978}
   - component: {fileID: 1963167977}
+  - component: {fileID: 1963167979}
   m_Layer: 0
   m_Name: BridgePiece (2)
   m_TagString: Untagged
@@ -146074,6 +146604,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963167975}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &1963167979
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963167975}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1001 &1965055708
 PrefabInstance:
@@ -151340,6 +151892,7 @@ GameObject:
   - component: {fileID: 2006799874}
   - component: {fileID: 2006799876}
   - component: {fileID: 2006799875}
+  - component: {fileID: 2006799877}
   m_Layer: 0
   m_Name: BridgePiece (3)
   m_TagString: Untagged
@@ -151419,6 +151972,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006799873}
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &2006799877
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006799873}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!1 &2008346791
 GameObject:
   m_ObjectHideFlags: 0
@@ -151430,6 +152005,7 @@ GameObject:
   - component: {fileID: 2008346792}
   - component: {fileID: 2008346794}
   - component: {fileID: 2008346793}
+  - component: {fileID: 2008346795}
   m_Layer: 0
   m_Name: BridgePiece (1)
   m_TagString: Untagged
@@ -151508,6 +152084,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008346791}
+  m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
+--- !u!64 &2008346795
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008346791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7214700596161384075, guid: c5924bd81b323754eb30e30c873e42cb, type: 3}
 --- !u!4 &2008521947 stripped
 Transform:
