@@ -55,6 +55,12 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
+        PlayerAnimationController playerAnimation = GetComponent<PlayerAnimationController>();
+        if (playerAnimation != null)
+        {
+            playerAnimation.PlayRegularAttack();
+        }
+
         Vector2 aimPosition;
 
         if (hitMarkerUI != null)

@@ -86,6 +86,12 @@ public class TimeRewind : MonoBehaviour
 
         if (success)
         {
+            PlayerAnimationController playerAnimation = GetComponent<PlayerAnimationController>();
+            if (playerAnimation != null)
+            {
+                playerAnimation.PlayReverseTime();
+            }
+
             cooldownTimer = cooldownDuration;
             Debug.Log("Rewind used. Cooldown started (" + cooldownDuration + "s)");
 
