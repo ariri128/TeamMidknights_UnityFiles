@@ -101158,11 +101158,12 @@ MonoBehaviour:
   target: {fileID: 2705848}
   visualRenderer: {fileID: 1746853813}
   distanceMultiplier: 2.2
-  heightMultiplier: 0.9
-  sideMultiplier: 0.18
+  heightMultiplier: 0.7
+  shoulderOffset: 0.4
+  playerScreenOffset: 0.7
   mouseSensitivity: 0.25
-  minPitch: -15
-  maxPitch: 25
+  minPitch: -35
+  maxPitch: 55
   moveSmoothness: 8
   rotateSmoothness: 10
 --- !u!4 &1090651823 stripped
@@ -113081,7 +113082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitMarker
   hitMarkerRect: {fileID: 1343632217}
-  screenOffset: {x: 101, y: 82}
+  screenOffset: {x: 0, y: 0}
 --- !u!1 &1271504527
 GameObject:
   m_ObjectHideFlags: 0
@@ -118562,7 +118563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 101, y: 82}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343632218

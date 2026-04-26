@@ -8,7 +8,8 @@ public class CameraController : MonoBehaviour
 
     public float distanceMultiplier = 2.2f;
     public float heightMultiplier = 0.9f;
-    public float sideMultiplier = 0.18f;
+    public float shoulderOffset = 0.4f;
+    public float playerScreenOffset = 0.35f;
 
     public float mouseSensitivity = 0.08f;
     public float minPitch = -15f;
@@ -64,11 +65,12 @@ public class CameraController : MonoBehaviour
         Bounds bounds = visualRenderer.bounds;
         float characterHeight = bounds.size.y;
 
-        Vector3 focusPoint = bounds.center + Vector3.up * (characterHeight * 0.15f);
-
         Quaternion orbitRotation = Quaternion.Euler(pitch, yaw, 0f);
 
-        float sideOffset = characterHeight * sideMultiplier;
+        Vector3 focusPoint = bounds.center + Vector3.up * (characterHeight * 0.15f);
+        focusPoint += orbitRotation * Vector3.right * (characterHeight * playerScreenOffset);
+
+        float sideOffset = characterHeight * shoulderOffset;
         float verticalOffset = characterHeight * heightMultiplier;
         float distance = characterHeight * distanceMultiplier;
 

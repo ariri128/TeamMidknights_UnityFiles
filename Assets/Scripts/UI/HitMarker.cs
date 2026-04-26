@@ -37,12 +37,6 @@ public class HitMarker : MonoBehaviour
 
     public Vector2 GetHitMarkerScreenPosition()
     {
-        if (hitMarkerRect == null)
-        {
-            return new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
-        }
-
-        Vector2 screenCenter = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
-        return screenCenter + screenOffset;
+        return new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
     }
 }
