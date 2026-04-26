@@ -16,9 +16,12 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
 
+    private PlayerAnimationController playerAnimation;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        playerAnimation = GetComponent<PlayerAnimationController>();
     }
 
     private void Update()
@@ -57,9 +60,19 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveDirection = (cameraForward * vertical + cameraRight * horizontal).normalized;
 
+        if (playerAnimation != null)
+        {
+            playerAnimation.SetRunning(canMove && moveDirection.magnitude > 0.1f);
+        }
+
         if (canMove && Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+            if (playerAnimation != null)
+            {
+                playerAnimation.PlayJump();
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -68,6 +81,11 @@ public class PlayerController : MonoBehaviour
         finalMove.y = velocity.y;
 
         controller.Move(finalMove * Time.deltaTime);
+
+        if (controller.isGrounded && playerAnimation != null)
+        {
+            playerAnimation.EndJump();
+        }
 
         if (canMove && moveDirection.magnitude > 0.1f)
         {

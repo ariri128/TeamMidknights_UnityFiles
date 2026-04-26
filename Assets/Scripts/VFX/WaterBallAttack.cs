@@ -14,10 +14,12 @@ public class WaterBallAttack : MonoBehaviour
     public int manaCost = 10;
 
     private PlayerMana playerMana;
+    private PlayerAnimationController playerAnimation;
 
     private void Awake()
     {
         playerMana = GetComponent<PlayerMana>();
+        playerAnimation = GetComponent<PlayerAnimationController>();
     }
 
     private void Update()
@@ -52,9 +54,19 @@ public class WaterBallAttack : MonoBehaviour
             return;
         }
 
+        if (playerAnimation != null && !playerAnimation.CanUseLargeAttack())
+        {
+            return;
+        }
+
         if (playerMana == null || !playerMana.TrySpendMana(manaCost))
         {
             return;
+        }
+
+        if (playerAnimation != null)
+        {
+            playerAnimation.PlayLargeAttack();
         }
 
         Vector2 aimPosition;

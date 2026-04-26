@@ -25,8 +25,7 @@ public class TimeSlow : MonoBehaviour
     {
         UpdateCooldown();
 
-        if (Keyboard.current != null && Keyboard.current.leftShiftKey.wasPressedThisFrame ||
-    Keyboard.current.rightShiftKey.wasPressedThisFrame)
+        if (Keyboard.current != null && (Keyboard.current.leftShiftKey.wasPressedThisFrame || Keyboard.current.rightShiftKey.wasPressedThisFrame))
         {
             TryActivateTimeSlow();
         }
@@ -65,6 +64,12 @@ public class TimeSlow : MonoBehaviour
     private IEnumerator ActivateTimeSlow()
     {
         isSlowActive = true;
+
+        PlayerAnimationController playerAnimation = GetComponent<PlayerAnimationController>();
+        if (playerAnimation != null)
+        {
+            playerAnimation.PlayPauseTime();
+        }
 
         GuardAI[] guards = FindObjectsByType<GuardAI>(FindObjectsSortMode.None);
 

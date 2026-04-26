@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 4516939781425546592}
   - component: {fileID: -6609465612279117886}
   - component: {fileID: -3031026501336817121}
+  - component: {fileID: 5026672330199506036}
   m_Layer: 10
   m_Name: PlayerRoot
   m_TagString: Untagged
@@ -144,9 +145,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHP: 300
-  loseDelay: 0.75
+  loseDelay: 2.3
   loseLevelLoader: {fileID: 0}
   cameraController: {fileID: 0}
+  regenAmount: 5
+  regenInterval: 1
+  regenDelayAfterDamage: 3
 --- !u!114 &7665335512966440950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +251,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3fb64b3effb4d9bb1b0dfe28b0619f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerObjectInteraction
+--- !u!114 &5026672330199506036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445776840662883021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd850607fc6d046218fc411b6064e3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
+  animator: {fileID: 0}
+  oneAttackDuration: 0.25
+  rapidAttackDuration: 0.35
+  mediumAttackDuration: 0.8
+  largeAttackDuration: 1.1
+  reverseTimeDuration: 0.3
+  pauseTimeDuration: 1.1
+  dyingDuration: 2.3
 --- !u!1001 &298469940463078823
 PrefabInstance:
   m_ObjectHideFlags: 0

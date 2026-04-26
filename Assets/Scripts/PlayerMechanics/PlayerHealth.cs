@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHP = 1000;
-    public float loseDelay = 0.75f;
+    public float loseDelay = 2.3f;
 
     public LevelLoader loseLevelLoader;
     public CameraController cameraController;
@@ -100,6 +100,12 @@ public class PlayerHealth : MonoBehaviour
         if (playerController != null)
         {
             playerController.DisableMovement();
+        }
+
+        PlayerAnimationController playerAnimation = GetComponent<PlayerAnimationController>();
+        if (playerAnimation != null)
+        {
+            playerAnimation.PlayDying();
         }
 
         if (cameraController != null)
