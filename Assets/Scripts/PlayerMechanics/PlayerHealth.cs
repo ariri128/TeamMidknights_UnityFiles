@@ -16,10 +16,51 @@ public class PlayerHealth : MonoBehaviour
     public int CurrentHP => currentHP;
     public int MaxHP => maxHP;
 
+    public int regenAmount = 5;
+    public float regenInterval = 1f;
+    public float regenDelayAfterDamage = 3f;
+
+    private float regenTimer;
+    private float lastDamageTime;
+
     private void Awake()
     {
         currentHP = maxHP;
         playerController = GetComponent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        RegenerateHealth();
+    }
+
+    private void RegenerateHealth()
+    {
+        if (isDead)
+        {
+            return;
+        }
+
+        if (currentHP >= maxHP)
+        {
+            return;
+        }
+
+        if (Time.time < lastDamageTime + regenDelayAfterDamage)
+        {
+            return;
+        }
+
+        regenTimer += Time.deltaTime;
+
+        if (regenTimer >= regenInterval)
+        {
+            regenTimer = 0f;
+            currentHP += regenAmount;
+            currentHP = Mathf.Min(currentHP, maxHP);
+
+            Debug.Log("HP regenerated. HP is now: " + currentHP);
+        }
     }
 
     public void TakeDamage(int amount)
@@ -31,6 +72,8 @@ public class PlayerHealth : MonoBehaviour
 
         currentHP -= amount;
         currentHP = Mathf.Max(currentHP, 0);
+
+        lastDamageTime = Time.time;
 
         Debug.Log("Damage taken. Player HP is now: " + currentHP);
 
