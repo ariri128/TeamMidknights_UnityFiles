@@ -79,4 +79,10 @@ public class GuardHealth : MonoBehaviour
         Debug.Log(gameObject.name + " died.");
         Destroy(gameObject);
     }
+
+    public void KillImmediately()
+    {
+        Debug.Log(gameObject.name + " was defeated by water splash.");
+        Destroy(gameObject);
+    }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3295972347583605972}
   - component: {fileID: 8956345373949499390}
   - component: {fileID: 5807727341763125790}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyGuard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   floorPatrolRadius: 8
   navMeshSearchDistance: 4
   patrolWaitTime: 1.5
-  chaseRadius: 5
+  chaseRadius: 7
   attackRadius: 1
   losePlayerRadius: 7
   damageAmount: 50
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardHealth
   maxHP: 100
-  flashColor: {r: 1, g: 0, b: 0, a: 0.5}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
   flashDuration: 0.15
 --- !u!1001 &349920635359052891
 PrefabInstance:
