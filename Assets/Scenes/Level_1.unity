@@ -174534,6 +174534,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942515356}
   m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
+--- !u!1 &1943194244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6882263471814681341, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+  m_PrefabInstance: {fileID: 787348371979475762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1943194246
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943194244}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0b3379c880a5e442a6107a1ce0b97a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1943634334
 GameObject:
   m_ObjectHideFlags: 0
@@ -192833,6 +192860,10 @@ PrefabInstance:
       propertyPath: waterJetSpawnPoint
       value: 
       objectReference: {fileID: 787348371979475763}
+    - target: {fileID: 5026672330199506036, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1943194246}
     - target: {fileID: 5092876549752315607, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       propertyPath: m_Height
       value: 1.27
@@ -192908,7 +192939,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6882263471814681341, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1943194246}
   m_SourcePrefab: {fileID: 100100000, guid: 5649fb169809742f5a708460d23befdc, type: 3}
 --- !u!4 &787348371979475763 stripped
 Transform:
