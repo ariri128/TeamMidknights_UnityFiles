@@ -12,6 +12,8 @@ public class TimeSlow : MonoBehaviour
     private bool isSlowActive = false;
     private float cooldownTimer = 0f;
 
+    public bool IsSlowActive => isSlowActive;
+
     private PlayerMana playerMana;
 
     private void Awake()
@@ -63,7 +65,6 @@ public class TimeSlow : MonoBehaviour
     private IEnumerator ActivateTimeSlow()
     {
         isSlowActive = true;
-        cooldownTimer = cooldownDuration;
 
         GuardAI[] guards = FindObjectsByType<GuardAI>(FindObjectsSortMode.None);
 
@@ -90,6 +91,8 @@ public class TimeSlow : MonoBehaviour
         }
 
         isSlowActive = false;
+        cooldownTimer = cooldownDuration;
+
         Debug.Log("Time slow ended.");
     }
 }

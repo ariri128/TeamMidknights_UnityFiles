@@ -26,6 +26,9 @@ public class TimeRewind : MonoBehaviour
     public float cooldownDuration = 10f;
     public int manaCost = 10;
 
+    public GameObject rewindSplashPrefab;
+    public float splashGroundRayDistance = 5f;
+
     private float cooldownTimer = 0f;
 
     private List<PlayerSnapshot> history = new List<PlayerSnapshot>();
@@ -149,6 +152,10 @@ public class TimeRewind : MonoBehaviour
             return false;
         }
 
+        Vector3 currentPosition = transform.position;
+
+        // SpawnRewindSplash(currentPosition);
+
         if (controller != null)
         {
             controller.enabled = false;
@@ -162,6 +169,8 @@ public class TimeRewind : MonoBehaviour
             controller.enabled = true;
         }
 
+        SpawnRewindSplash(rewindSnapshot.position);
+
         PlayerController playerController = GetComponent<PlayerController>();
         if (playerController != null)
         {
@@ -174,5 +183,22 @@ public class TimeRewind : MonoBehaviour
         Debug.Log("Rewound HP to: " + rewindSnapshot.hp);
 
         return true;
+    }
+
+    private void SpawnRewindSplash(Vector3 position)
+    {
+        if (rewindSplashPrefab == null)
+        {
+            return;
+        }
+
+        Vector3 spawnPosition = position;
+
+        if (Physics.Raycast(position + Vector3.up * 1f, Vector3.down, out RaycastHit hit, splashGroundRayDistance))
+        {
+            spawnPosition = hit.point;
+        }
+
+        Instantiate(rewindSplashPrefab, spawnPosition, Quaternion.identity);
     }
 }
