@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour
 {
     public Transform spawnPoint;
+    public GameObject spawnSplashPrefab;
+    public float splashGroundRayDistance = 5f;
 
     private CharacterController controller;
 
@@ -25,6 +27,25 @@ public class PlayerSpawner : MonoBehaviour
             {
                 controller.enabled = true;
             }
+
+            SpawnSplash(transform.position);
         }
+    }
+
+    private void SpawnSplash(Vector3 position)
+    {
+        if (spawnSplashPrefab == null)
+        {
+            return;
+        }
+
+        Vector3 splashPosition = position;
+
+        if (Physics.Raycast(position + Vector3.up * 1f, Vector3.down, out RaycastHit hit, splashGroundRayDistance))
+        {
+            splashPosition = hit.point;
+        }
+
+        Instantiate(spawnSplashPrefab, splashPosition, Quaternion.identity);
     }
 }
