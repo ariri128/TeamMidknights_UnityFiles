@@ -7,6 +7,8 @@ public class WaterBallSplash : MonoBehaviour
     public float speed = 12f;
     public float lifetime = 4f;
     public float splashRadius = 2.5f;
+    [Tooltip("Damage dealt to the General by the water ball (guards are still killed instantly).")]
+    public int generalDamage = 75;
     public LayerMask collisionLayers = ~0;
 
     private Vector3 moveDirection;
@@ -79,10 +81,15 @@ public class WaterBallSplash : MonoBehaviour
         for (int i = 0; i < hits.Length; i++)
         {
             GuardHealth guardHealth = hits[i].GetComponentInParent<GuardHealth>();
+            GeneralHealth generalHealth = hits[i].GetComponentInParent<GeneralHealth>();
 
             if (guardHealth != null)
             {
                 guardHealth.KillImmediately();
+            }
+            else if (generalHealth != null)
+            {
+                generalHealth.TakeDamage(generalDamage);
             }
         }
 
