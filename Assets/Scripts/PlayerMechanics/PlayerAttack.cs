@@ -81,11 +81,17 @@ public class PlayerAttack : MonoBehaviour
             targetPoint = hit.point;
 
             GuardHealth guardHealth = hit.collider.GetComponentInParent<GuardHealth>();
+            GeneralHealth generalHealth = hit.collider.GetComponentInParent<GeneralHealth>();
 
             if (guardHealth != null)
             {
                 guardHealth.TakeDamage(damageAmount);
                 Debug.Log("Guard hit.");
+            }
+            else if (generalHealth != null)
+            {
+                generalHealth.TakeDamage(damageAmount);
+                Debug.Log("General hit.");
             }
         }
 
