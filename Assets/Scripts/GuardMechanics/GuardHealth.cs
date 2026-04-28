@@ -19,6 +19,7 @@ public class GuardHealth : MonoBehaviour
     private void Awake()
     {
         currentHP = maxHP;
+        GuardTracker.Instance?.RegisterGuard();
 
         renderers = GetComponentsInChildren<Renderer>();
 
@@ -77,12 +78,16 @@ public class GuardHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log(gameObject.name + " died.");
+        GuardTracker.Instance?.ReportGuardDeath(transform.position);
+        ThroneRoomDoors.Instance?.OnAllGuardsCleared();
         Destroy(gameObject);
     }
 
     public void KillImmediately()
     {
         Debug.Log(gameObject.name + " was defeated by water splash.");
+        GuardTracker.Instance?.ReportGuardDeath(transform.position);
+        ThroneRoomDoors.Instance?.OnAllGuardsCleared();
         Destroy(gameObject);
     }
 }

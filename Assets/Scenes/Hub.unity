@@ -577,6 +577,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 275225965}
+    - target: {fileID: 5026672330199506036, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1596255180}
     - target: {fileID: 5194275956727887941, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -639,6 +643,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6882263471814681341, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1596255178}
+    - targetCorrespondingSourceObject: {fileID: 6882263471814681341, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1596255180}
     - targetCorrespondingSourceObject: {fileID: 640928442226979062, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 83450806}
@@ -14839,6 +14846,28 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!95 &1596255180
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596255176}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0b3379c880a5e442a6107a1ce0b97a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1600517445 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3445776840662883021, guid: 5649fb169809742f5a708460d23befdc, type: 3}
