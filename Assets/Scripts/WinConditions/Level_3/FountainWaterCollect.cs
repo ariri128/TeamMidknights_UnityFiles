@@ -81,8 +81,6 @@ public class FountainWaterCollect : MonoBehaviour
         PoisonTracker.Instance?.CollectIngredient(ingredientID);
 
         Debug.Log("Water collected from fountain.");
-
-        // Optional: ObjectivesPanel.Instance.CompleteObjective("water");
     }
 
     private void StopPulse()

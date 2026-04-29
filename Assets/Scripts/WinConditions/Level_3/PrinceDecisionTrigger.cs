@@ -46,10 +46,6 @@ public class PrinceDecisionTrigger : MonoBehaviour
         if (returnFromSpareButton != null) returnFromSpareButton.onClick.AddListener(ReturnToHub);
     }
 
-    /// <summary>
-    /// Called by PoisonTracker when all ingredients are collected.
-    /// If the player is already standing inside the trigger, show the panel immediately.
-    /// </summary>
     public void Unlock()
     {
         isUnlocked = true;
@@ -110,14 +106,12 @@ public class PrinceDecisionTrigger : MonoBehaviour
     {
         if (decisionPanel != null) decisionPanel.SetActive(false);
         if (princeKilledPanel != null) princeKilledPanel.SetActive(true);
-        // ObjectivesPanel.Instance.CompleteObjective("princeKilled");
     }
 
     private void OnSpareChosen()
     {
         if (decisionPanel != null) decisionPanel.SetActive(false);
         if (princeSparedPanel != null) princeSparedPanel.SetActive(true);
-        // ObjectivesPanel.Instance.CompleteObjective("princeSpared");
     }
 
     private void ReturnToHub()
