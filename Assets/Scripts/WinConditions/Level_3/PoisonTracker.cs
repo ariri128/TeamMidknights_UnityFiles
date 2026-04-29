@@ -33,10 +33,6 @@ public class PoisonTracker : MonoBehaviour
             ingredientMap[ingredient.id] = ingredient;
     }
 
-    /// <summary>
-    /// Call this when an ingredient is collected (called automatically by
-    /// PoisonIngredientPickup and FountainWaterCollect).
-    /// </summary>
     public void CollectIngredient(string id)
     {
         if (!ingredientMap.TryGetValue(id, out Ingredient ingredient))
@@ -49,8 +45,6 @@ public class PoisonTracker : MonoBehaviour
 
         ingredient.collected = true;
         Debug.Log($"PoisonTracker: Collected '{id}'");
-
-        // Optional: ObjectivesPanel.Instance.CompleteObjective(id);
 
         CheckAllCollected();
     }
