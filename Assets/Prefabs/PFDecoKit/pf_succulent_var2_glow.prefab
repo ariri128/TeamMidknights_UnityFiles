@@ -67,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5026954758439152845, guid: be7c2fdf40216b447bb807fc64777f83, type: 3}
       insertIndex: -1
       addedObject: {fileID: -4647069320434774750}
+    - targetCorrespondingSourceObject: {fileID: 5026954758439152845, guid: be7c2fdf40216b447bb807fc64777f83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4857109454556009996}
   m_SourcePrefab: {fileID: 100100000, guid: be7c2fdf40216b447bb807fc64777f83, type: 3}
 --- !u!1 &7283129705391488863 stripped
 GameObject:
@@ -95,3 +98,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2969188442695226735, guid: 94ce69d3606b154489e2a17ec654dd8d, type: 3}
+--- !u!114 &4857109454556009996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283129705391488863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572eb3b72696248b9bd79c107970986b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  popupPanel: {fileID: 0}
+  interactionRange: 2
+  interactPromptUI: {fileID: 0}

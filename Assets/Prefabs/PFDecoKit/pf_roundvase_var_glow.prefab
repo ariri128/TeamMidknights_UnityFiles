@@ -63,5 +63,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6527648498868258280, guid: b8ac322d90a33ed41a05e8cd5b2c48df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3870779059085928761}
   m_SourcePrefab: {fileID: 100100000, guid: b8ac322d90a33ed41a05e8cd5b2c48df, type: 3}
+--- !u!1 &5826207806727694862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6527648498868258280, guid: b8ac322d90a33ed41a05e8cd5b2c48df, type: 3}
+  m_PrefabInstance: {fileID: 741973090467786726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3870779059085928761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5826207806727694862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572eb3b72696248b9bd79c107970986b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  popupPanel: {fileID: 0}
+  interactionRange: 2
+  interactPromptUI: {fileID: 0}
