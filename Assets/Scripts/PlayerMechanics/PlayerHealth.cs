@@ -114,10 +114,15 @@ public class PlayerHealth : MonoBehaviour
         // Push player back away from guards so dying animation has space
         PushPlayerBackFromGuards();
 
-        // Stop all guard movement
+        // Stop all guard movement and reset to idle animation
         GuardAI[] guards = FindObjectsByType<GuardAI>(FindObjectsSortMode.None);
         foreach (GuardAI guard in guards)
+        {
             guard.enabled = false;
+            GuardAnimationController guardAnim = guard.GetComponent<GuardAnimationController>();
+            if (guardAnim != null)
+                guardAnim.SetIdle();
+        }
 
         PlayerAnimationController playerAnimation = GetComponent<PlayerAnimationController>();
         if (playerAnimation != null)
@@ -131,7 +136,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void PushPlayerBackFromGuards()
     {
-        // Find nearest guard and push player in the opposite direction
         GuardAI[] guards = FindObjectsByType<GuardAI>(FindObjectsSortMode.None);
         if (guards.Length == 0) return;
 

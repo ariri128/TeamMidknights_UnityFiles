@@ -19,6 +19,7 @@ public class GuardAI : MonoBehaviour
     public float damageInterval = 1f;
 
     private NavMeshAgent agent;
+    private GuardAnimationController guardAnim;
     private float waitTimer;
     private float damageTimer;
     private GuardState currentState;
@@ -37,6 +38,7 @@ public class GuardAI : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        guardAnim = GetComponent<GuardAnimationController>();
 
         normalSpeed = agent.speed;
         normalAngularSpeed = agent.angularSpeed;
@@ -61,6 +63,9 @@ public class GuardAI : MonoBehaviour
         switch (currentState)
         {
             case GuardState.Patrol:
+                guardAnim?.SetWalking(true);
+                guardAnim?.SetAttacking(false);
+
                 if (distanceToPlayer <= chaseRadius)
                 {
                     currentState = GuardState.Chase;
@@ -80,6 +85,9 @@ public class GuardAI : MonoBehaviour
                 break;
 
             case GuardState.Chase:
+                guardAnim?.SetWalking(true);
+                guardAnim?.SetAttacking(false);
+
                 if (distanceToPlayer <= attackRadius)
                 {
                     currentState = GuardState.Attack;
@@ -101,6 +109,9 @@ public class GuardAI : MonoBehaviour
                 break;
 
             case GuardState.Attack:
+                guardAnim?.SetAttacking(true);
+                guardAnim?.SetWalking(false);
+
                 Vector3 lookTarget = new Vector3(player.position.x, transform.position.y, player.position.z);
                 transform.LookAt(lookTarget);
 

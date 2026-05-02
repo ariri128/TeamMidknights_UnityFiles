@@ -78,9 +78,21 @@ public class GuardHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log(gameObject.name + " died.");
+
+        // Notify trackers immediately (dagger spawns, doors check, etc.)
         GuardTracker.Instance?.ReportGuardDeath(transform.position);
         ThroneRoomDoors.Instance?.OnAllGuardsCleared();
-        Destroy(gameObject);
+
+        // Disable AI so guard stops moving
+        GuardAI ai = GetComponent<GuardAI>();
+        if (ai != null) ai.enabled = false;
+
+        // Play death animation
+        GuardAnimationController guardAnim = GetComponent<GuardAnimationController>();
+        if (guardAnim != null)
+            guardAnim.PlayDeath();
+        else
+            Destroy(gameObject); // fallback if no animator set up
     }
 
     public void KillImmediately()
@@ -88,6 +100,14 @@ public class GuardHealth : MonoBehaviour
         Debug.Log(gameObject.name + " was defeated by water splash.");
         GuardTracker.Instance?.ReportGuardDeath(transform.position);
         ThroneRoomDoors.Instance?.OnAllGuardsCleared();
-        Destroy(gameObject);
+
+        GuardAI ai = GetComponent<GuardAI>();
+        if (ai != null) ai.enabled = false;
+
+        GuardAnimationController guardAnim = GetComponent<GuardAnimationController>();
+        if (guardAnim != null)
+            guardAnim.PlayDeath();
+        else
+            Destroy(gameObject);
     }
 }
