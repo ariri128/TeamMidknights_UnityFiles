@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawner
   spawnPoint: {fileID: 0}
+  spawnSplashPrefab: {fileID: 0}
+  splashGroundRayDistance: 5
 --- !u!114 &5194275956727887941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +132,7 @@ MonoBehaviour:
   moveSpeed: 4.5
   rotationSpeed: 10
   jumpHeight: 1.2
-  gravity: -20
+  gravity: -25
   canMove: 1
 --- !u!114 &1530625646322377714
 MonoBehaviour:
@@ -163,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600010e7f9bba423da3193384e704312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMana
-  maxMana: 300
+  maxMana: 200
 --- !u!114 &857300581341619071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,9 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec17169be93e84c80935c451823be011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeSlow
-  slowDuration: 5
+  slowDuration: 10
   cooldownDuration: 10
-  guardSpeedMultiplier: 0.25
+  guardSpeedMultiplier: 0.08
   manaCost: 10
 --- !u!114 &4516939781425546592
 MonoBehaviour:
@@ -215,10 +217,10 @@ MonoBehaviour:
   timeSlow: {fileID: 0}
   waterJetPrefab: {fileID: 0}
   waterJetSpawnPoint: {fileID: 0}
-  attackRange: 200
+  attackRange: 100
   damageAmount: 50
   manaCost: 5
-  minimumJetDistance: 2
+  minimumJetDistance: 3
 --- !u!114 &-6609465612279117886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,13 +266,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
   animator: {fileID: 0}
-  oneAttackDuration: 0.25
-  rapidAttackDuration: 0.35
   mediumAttackDuration: 0.8
-  largeAttackDuration: 1.1
-  reverseTimeDuration: 0.3
+  rapidAttackDuration: 0.35
+  largeAttackDuration: 2.8
   pauseTimeDuration: 1.1
+  reverseTimeAnimDelay: 0
+  reverseTimeDuration: 0.3
   dyingDuration: 2.3
+  jumpLandingPhaseNormalized: 0.7
+  runLegsWhileAttacking: 1
 --- !u!1001 &298469940463078823
 PrefabInstance:
   m_ObjectHideFlags: 0
