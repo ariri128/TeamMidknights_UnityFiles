@@ -10622,6 +10622,7 @@ GameObject:
   - component: {fileID: 95852663}
   - component: {fileID: 95852665}
   - component: {fileID: 95852664}
+  - component: {fileID: 95852666}
   m_Layer: 0
   m_Name: Wall_SmallWindow (2)
   m_TagString: Untagged
@@ -10700,6 +10701,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95852662}
+  m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
+--- !u!64 &95852666
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95852662}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
 --- !u!1 &96520338
 GameObject:
@@ -85547,7 +85570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14, y: 0.64000005}
   m_AnchorMax: {x: 0.83000004, y: 0.76000005}
-  m_AnchoredPosition: {x: 1.5000038, y: -4.200012}
+  m_AnchoredPosition: {x: 1.5, y: -4.200012}
   m_SizeDelta: {x: 131, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771295305
@@ -107070,6 +107093,7 @@ GameObject:
   - component: {fileID: 970933686}
   - component: {fileID: 970933688}
   - component: {fileID: 970933687}
+  - component: {fileID: 970933689}
   m_Layer: 0
   m_Name: Wall_SmallWindow (2)
   m_TagString: Untagged
@@ -107148,6 +107172,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970933685}
+  m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
+--- !u!64 &970933689
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970933685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
 --- !u!1001 &971458888
 PrefabInstance:
@@ -122345,7 +122391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18, y: 0.48000002}
   m_AnchorMax: {x: 0.48000002, y: 0.52000004}
-  m_AnchoredPosition: {x: -0.10000229, y: 0.40000153}
+  m_AnchoredPosition: {x: -0.10000992, y: 0.40000153}
   m_SizeDelta: {x: 130, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096179640
@@ -129627,6 +129673,7 @@ GameObject:
   - component: {fileID: 1153439263}
   - component: {fileID: 1153439265}
   - component: {fileID: 1153439264}
+  - component: {fileID: 1153439266}
   m_Layer: 0
   m_Name: Wall_SmallWindow (3)
   m_TagString: Untagged
@@ -129705,6 +129752,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153439262}
+  m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
+--- !u!64 &1153439266
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153439262}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
 --- !u!1 &1154670729
 GameObject:
@@ -132219,6 +132288,7 @@ GameObject:
   - component: {fileID: 1174902681}
   - component: {fileID: 1174902683}
   - component: {fileID: 1174902682}
+  - component: {fileID: 1174902684}
   m_Layer: 0
   m_Name: Wall_SmallWindow (1)
   m_TagString: Untagged
@@ -132297,6 +132367,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174902680}
+  m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
+--- !u!64 &1174902684
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174902680}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2851896143622865661, guid: b2fd0267ee55ae64fbd7041dea62ff29, type: 3}
 --- !u!1001 &1176274032
 PrefabInstance:
@@ -141459,7 +141551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18, y: 0.48000002}
   m_AnchorMax: {x: 0.48000002, y: 0.52000004}
-  m_AnchoredPosition: {x: -0.10000229, y: 0.40000153}
+  m_AnchoredPosition: {x: -0.10000992, y: 0.40000153}
   m_SizeDelta: {x: 130, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265029015
@@ -214460,7 +214552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18, y: 0.48000002}
   m_AnchorMax: {x: 0.48000002, y: 0.52000004}
-  m_AnchoredPosition: {x: -0.10000229, y: 0.40000153}
+  m_AnchoredPosition: {x: -0.10000992, y: 0.40000153}
   m_SizeDelta: {x: 130, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910054468
@@ -235184,7 +235276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18, y: 0.48000002}
   m_AnchorMax: {x: 0.48000002, y: 0.52000004}
-  m_AnchoredPosition: {x: -0.10000229, y: 0.40000153}
+  m_AnchoredPosition: {x: -0.10000992, y: 0.40000153}
   m_SizeDelta: {x: 130, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081468475
