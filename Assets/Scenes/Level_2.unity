@@ -64889,7 +64889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.27}
   m_AnchorMax: {x: 0.79, y: 0.71000004}
-  m_AnchoredPosition: {x: 0.50001526, y: 13.400024}
+  m_AnchoredPosition: {x: 0.5, y: 13.400024}
   m_SizeDelta: {x: 141, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596121573
@@ -91152,48 +91152,37 @@ MonoBehaviour:
   AllSounds:
   - Type: 0
     Clip: {fileID: 8300000, guid: ff0c6c0ef94728744aa602ec40950cf6, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 1
   - Type: 1
     Clip: {fileID: 8300000, guid: 0c2944c7b03bdeb4aaf5b52bd81cbbe8, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 1
   - Type: 2
     Clip: {fileID: 8300000, guid: bab2596b090233c41a3ac7ccaad08144, type: 3}
     Volume: 0
-    Source: {fileID: 0}
   - Type: 3
     Clip: {fileID: 8300000, guid: 523c9f68994ce6146880768464848d94, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 1
   - Type: 4
     Clip: {fileID: 8300000, guid: 77498854e5f10be468bad694e94b0d5d, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 1
   - Type: 5
     Clip: {fileID: 8300000, guid: fee85d80c9b37174a85222c95f508dda, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 1
   - Type: 6
     Clip: {fileID: 8300000, guid: 9aed0144ebd6caa419cb26adc1f53c60, type: 3}
     Volume: 0
-    Source: {fileID: 0}
   - Type: 7
     Clip: {fileID: 8300000, guid: c41dbdb5aa8fbe9459d8db70a94bc7ed, type: 3}
     Volume: 0
-    Source: {fileID: 0}
   - Type: 8
     Clip: {fileID: 8300000, guid: b4313bfd9018af6488674901f7fc24eb, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 0.5
   - Type: 9
     Clip: {fileID: 8300000, guid: 34ea7c43e6a09b24d9930de79c93937d, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 0.5
   - Type: 10
     Clip: {fileID: 8300000, guid: c2f298eb3b0740f488c8080c00a857eb, type: 3}
-    Volume: 0
-    Source: {fileID: 0}
+    Volume: 0.5
 --- !u!4 &832272692
 Transform:
   m_ObjectHideFlags: 0
@@ -159894,7 +159883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18, y: 0.48000002}
   m_AnchorMax: {x: 0.48000002, y: 0.52000004}
-  m_AnchoredPosition: {x: -0.09998703, y: 0.40000153}
+  m_AnchoredPosition: {x: -0.0999794, y: 0.40000153}
   m_SizeDelta: {x: 130, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448694000
@@ -218421,7 +218410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6313177029167918874, guid: e5f4bb8c367fc47c4836597392ea3d77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.29999542
+      value: 0.2999878
       objectReference: {fileID: 0}
     - target: {fileID: 6498670388281686331, guid: e5f4bb8c367fc47c4836597392ea3d77, type: 3}
       propertyPath: m_Sprite
@@ -315082,6 +315071,7 @@ MeshCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 832272692}
   - {fileID: 2127390931}
   - {fileID: 1717650876}
   - {fileID: 338138237}
@@ -315596,4 +315586,3 @@ SceneRoots:
   - {fileID: 1557330260}
   - {fileID: 327002412}
   - {fileID: 989149073}
-  - {fileID: 832272692}

@@ -13,6 +13,7 @@ public class WaterJetAttack : MonoBehaviour
 
     public void Launch(Vector3 direction, float distance)
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.WaterPowerReg);
         startPosition = transform.position;
         moveDirection = direction.normalized;
         maxDistance = distance;

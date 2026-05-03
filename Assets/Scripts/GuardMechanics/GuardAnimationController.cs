@@ -38,6 +38,10 @@ public class GuardAnimationController : MonoBehaviour
         if (animator == null || isDead) return;
         animator.SetBool(hashIsAttacking, attacking);
 
+        //Added in sound here! Is not working, I have audio manager vol set to 0 bc is was looping
+        Debug.Log("Played Sound");
+        AudioManager.Instance.Play(AudioManager.SoundType.GuardSwing);
+
         // When attacking, guard is not walking
         if (attacking)
             animator.SetBool(hashIsWalking, false);
