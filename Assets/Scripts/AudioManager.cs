@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
- 
+using UnityEngine.SceneManagement;
+
 public class AudioManager : MonoBehaviour
 {
     public enum SoundType
@@ -16,72 +17,99 @@ public class AudioManager : MonoBehaviour
         Music_King,
         Music_General,
         Music_Hub
-        // Add more sound types as needed
     }
- 
+
     [System.Serializable]
     public class Sound
     {
         public SoundType Type;
         public AudioClip Clip;
- 
+
         [Range(0f, 1f)]
         public float Volume = 1f;
- 
-        [HideInInspector]
-        public AudioSource Source;
     }
- 
-    //Singleton
+
     public static AudioManager Instance;
- 
-    //All sounds and their associated type - Set these in the inspector
+
     public Sound[] AllSounds;
- 
-    //Runtime collections
+
     private Dictionary<SoundType, Sound> _soundDictionary = new Dictionary<SoundType, Sound>();
     private AudioSource _musicSource;
- 
+
     private void Awake()
     {
-        //Assign singleton
+        // Singleton safety
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
- 
-        //Set up sounds
-        foreach(var s in AllSounds)
+        DontDestroyOnLoad(gameObject);
+
+        // Build dictionary
+        foreach (var s in AllSounds)
         {
             _soundDictionary[s.Type] = s;
         }
     }
- 
- 
- 
-    //Call this method to play a sound
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // 🎵 Automatic music switching per scene
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.name)
+        {
+            case "Hub":
+                ChangeMusic(SoundType.Music_Hub);
+                break;
+
+            case "Level_3":
+                ChangeMusic(SoundType.Music_Prince);
+                break;
+
+            case "Level_1":
+                ChangeMusic(SoundType.Music_King);
+                break;
+
+            default:
+                ChangeMusic(SoundType.Music_General);
+                break;
+        }
+    }
+
+    // 🔊 Play one-shot SFX
     public void Play(SoundType type)
     {
-        //Make sure there's a sound assigned to your specified type
         if (!_soundDictionary.TryGetValue(type, out Sound s))
         {
             Debug.LogWarning($"Sound type {type} not found!");
             return;
         }
- 
-        //Creates a new sound object
-        var soundObj = new GameObject($"Sound_{type}");
-        var audioSrc = soundObj.AddComponent<AudioSource>();
- 
-        //Assigns your sound properties
+
+        GameObject soundObj = new GameObject($"Sound_{type}");
+        AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
+
         audioSrc.clip = s.Clip;
         audioSrc.volume = s.Volume;
- 
-        //Play the sound
+        audioSrc.spatialBlend = 0f; // IMPORTANT: makes it 2D sound
+
         audioSrc.Play();
- 
-        //Destroy the object
+
         Destroy(soundObj, s.Clip.length);
     }
- 
-    //Call this method to change music tracks
+
+    // 🎵 Music system
     public void ChangeMusic(SoundType type)
     {
         if (!_soundDictionary.TryGetValue(type, out Sound track))
@@ -89,15 +117,21 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning($"Music track {type} not found!");
             return;
         }
- 
+
         if (_musicSource == null)
         {
-            var container = new GameObject("SoundTrackObj");
+            GameObject container = new GameObject("MusicSource");
             _musicSource = container.AddComponent<AudioSource>();
             _musicSource.loop = true;
+            _musicSource.playOnAwake = false;
+            _musicSource.spatialBlend = 0f;
         }
- 
+
+        if (_musicSource.clip == track.Clip)
+            return; // prevents restarting same music
+
         _musicSource.clip = track.Clip;
+        _musicSource.volume = track.Volume;
         _musicSource.Play();
     }
 }
