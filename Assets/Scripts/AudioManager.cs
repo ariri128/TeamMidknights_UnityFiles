@@ -16,7 +16,11 @@ public class AudioManager : MonoBehaviour
         Music_Prince,
         Music_King,
         Music_General,
-        Music_Hub
+        Music_Hub,
+        UI_Click,
+        Object_Pickup
+        
+
     }
 
     [System.Serializable]
@@ -65,9 +69,10 @@ public class AudioManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // 🎵 Automatic music switching per scene
+// Tries to switch to Scene
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("Scene loaded: " + scene.name);
         switch (scene.name)
         {
             case "Hub":
