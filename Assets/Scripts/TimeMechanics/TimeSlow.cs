@@ -80,7 +80,7 @@ public class TimeSlow : MonoBehaviour
             playerAnimation.PlayPauseTime();
 
              //Added in sound here!
-            Debug.Log("Played Sound");
+            Debug.Log("Played Time slow Sound");
             AudioManager.Instance.Play(AudioManager.SoundType.SlowDownTime);
         }
 

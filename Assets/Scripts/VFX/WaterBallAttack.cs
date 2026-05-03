@@ -76,7 +76,7 @@ public class WaterBallAttack : MonoBehaviour
         }
 
         //Added in sound here!
-        Debug.Log("Played Sound");
+        Debug.Log("Played Water Ball Sound");
         AudioManager.Instance.Play(AudioManager.SoundType.WaterPowerBigBlast);
 
         Vector2 aimPosition;
