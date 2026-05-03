@@ -5,17 +5,17 @@ public class AudioManager : MonoBehaviour
 {
     public enum SoundType
     {
-        SplashShot,
-        TimeSlow,
+        WaterPowerReg,
+        WaterPowerBigBlast,
+        GuardSwing,
+        SlowDownTime,
         RewindTime,
-        CollectNoise,
-        Waves,
-        Death,
-        Shoot,
-        Music_Hub,
-        Music_StartScreen,
-        Music_Desert,
-        Music_Battle
+        WaterFountain,
+        WaterRefill,
+        Music_Prince,
+        Music_King,
+        Music_General,
+        Music_Hub
         // Add more sound types as needed
     }
  
