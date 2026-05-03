@@ -78,6 +78,10 @@ public class TimeSlow : MonoBehaviour
         if (playerAnimation != null)
         {
             playerAnimation.PlayPauseTime();
+
+             //Added in sound here!
+            Debug.Log("Played Sound");
+            AudioManager.Instance.Play(AudioManager.SoundType.SlowDownTime);
         }
 
         GuardAI[] guards = FindObjectsByType<GuardAI>(FindObjectsSortMode.None);

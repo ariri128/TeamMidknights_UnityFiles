@@ -75,6 +75,10 @@ public class WaterBallAttack : MonoBehaviour
             playerAnimation.PlayLargeAttack();
         }
 
+        //Added in sound here!
+        Debug.Log("Played Sound");
+        AudioManager.Instance.Play(AudioManager.SoundType.WaterPowerBigBlast);
+
         Vector2 aimPosition;
 
         if (hitMarkerUI != null)

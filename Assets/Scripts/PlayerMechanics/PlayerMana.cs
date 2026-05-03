@@ -43,6 +43,10 @@ public class PlayerMana : MonoBehaviour
 
         Debug.Log("Mana restored. Current mana: " + currentMana);
 
+        //Added in sound here!
+        Debug.Log("Played Sound");
+        AudioManager.Instance.Play(AudioManager.SoundType.WaterRefill);
+
         if (currentMana > 0)
         {
             outOfManaMessageShown = false;

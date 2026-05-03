@@ -89,6 +89,10 @@ public class TimeRewind : MonoBehaviour
         if (playerAnimation != null)
             teleportDelay = playerAnimation.PlayReverseTime();
 
+        //Added in sound here!
+        Debug.Log("Played Sound");
+        AudioManager.Instance.Play(AudioManager.SoundType.RewindTime);
+
         StartCoroutine(RewindAfterDelay(teleportDelay));
 
         cooldownTimer = cooldownDuration;
