@@ -22,6 +22,10 @@ public class PoisonTracker : MonoBehaviour
     [Tooltip("Assign the PrinceDecisionTrigger so it gets unlocked when all ingredients are collected.")]
     public PrinceDecisionTrigger princeTrigger;
 
+    [Header("Throne Room Doors")]
+    [Tooltip("Assign PoisonThroneRoomDoors so the doors open when all ingredients are collected.")]
+    public PoisonThroneRoomDoors throneRoomDoors;
+
     private Dictionary<string, Ingredient> ingredientMap = new Dictionary<string, Ingredient>();
 
     private void Awake()
@@ -57,6 +61,9 @@ public class PoisonTracker : MonoBehaviour
         }
 
         Debug.Log("All poison ingredients collected! Prince trigger unlocked.");
+
+        if (throneRoomDoors != null)
+            throneRoomDoors.OpenDoors();
 
         if (princeTrigger != null)
             princeTrigger.Unlock();
