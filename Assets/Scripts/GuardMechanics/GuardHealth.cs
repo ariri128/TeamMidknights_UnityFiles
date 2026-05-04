@@ -15,40 +15,38 @@ public class GuardHealth : MonoBehaviour
     private Color[] originalColors;
 
     private Coroutine flashRoutine;
+    private bool isDead = false;
 
     private void Awake()
     {
         currentHP = maxHP;
-        GuardTracker.Instance?.RegisterGuard();
 
         renderers = GetComponentsInChildren<Renderer>();
-
         originalColors = new Color[renderers.Length];
-
         for (int i = 0; i < renderers.Length; i++)
-        {
             originalColors[i] = renderers[i].material.color;
-        }
+
+        // Register in Awake — only in levels that have a GuardTracker (Level 1)
+        if (GuardTracker.Instance != null)
+            GuardTracker.Instance.RegisterGuard();
     }
 
     public void TakeDamage(int amount)
     {
+        if (isDead) return;
+
         currentHP -= amount;
         currentHP = Mathf.Max(currentHP, 0);
 
         Debug.Log(gameObject.name + " took damage. Guard HP: " + currentHP);
 
         if (flashRoutine != null)
-        {
             StopCoroutine(flashRoutine);
-        }
 
         flashRoutine = StartCoroutine(DamageFlash());
 
         if (currentHP <= 0)
-        {
             Die();
-        }
     }
 
     private IEnumerator DamageFlash()
@@ -77,11 +75,13 @@ public class GuardHealth : MonoBehaviour
 
     private void Die()
     {
+        if (isDead) return;
+        isDead = true;
+
         Debug.Log(gameObject.name + " died.");
 
-        // Notify trackers immediately (dagger spawns, doors check, etc.)
+        // GuardTracker handles dagger spawn, objectives and door check
         GuardTracker.Instance?.ReportGuardDeath(transform.position);
-        ThroneRoomDoors.Instance?.OnAllGuardsCleared();
 
         // Disable AI so guard stops moving
         GuardAI ai = GetComponent<GuardAI>();
@@ -97,9 +97,11 @@ public class GuardHealth : MonoBehaviour
 
     public void KillImmediately()
     {
+        if (isDead) return;
+        isDead = true;
+
         Debug.Log(gameObject.name + " was defeated by water splash.");
         GuardTracker.Instance?.ReportGuardDeath(transform.position);
-        ThroneRoomDoors.Instance?.OnAllGuardsCleared();
 
         GuardAI ai = GetComponent<GuardAI>();
         if (ai != null) ai.enabled = false;
