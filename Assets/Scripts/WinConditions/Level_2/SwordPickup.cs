@@ -40,6 +40,10 @@ public class SwordPickup : MonoBehaviour
 
     private void PickUp()
     {
+        if (pickupPromptUI != null)
+            pickupPromptUI.SetActive(false);
+
+        Level2Tracker.Instance?.OnSwordCollected();
         Destroy(gameObject);
     }
 

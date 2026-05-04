@@ -86,6 +86,10 @@ public class GuardHealth : MonoBehaviour
         // Tutorial tracker
         TutorialManager.Instance?.ReportGuardKilled();
 
+        // Level 2 sword drop (only on sword-carrying guards)
+        GuardSwordDrop swordDrop = GetComponent<GuardSwordDrop>();
+        if (swordDrop != null) swordDrop.DropSword();
+
         // Disable AI so guard stops moving
         GuardAI ai = GetComponent<GuardAI>();
         if (ai != null) ai.enabled = false;
@@ -106,6 +110,10 @@ public class GuardHealth : MonoBehaviour
         Debug.Log(gameObject.name + " was defeated by water splash.");
         GuardTracker.Instance?.ReportGuardDeath(transform.position);
         TutorialManager.Instance?.ReportGuardKilled();
+
+        // Sword drop (Level 2)
+        GuardSwordDrop swordDrop = GetComponent<GuardSwordDrop>();
+        if (swordDrop != null) swordDrop.DropSword();
 
         GuardAI ai = GetComponent<GuardAI>();
         if (ai != null) ai.enabled = false;
