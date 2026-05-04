@@ -44,8 +44,11 @@ public class DaggerPickup : MonoBehaviour
 
     private void PickUp()
     {
-        // Tell the throne room doors the dagger is collected
-        ThroneRoomDoors.Instance.OnDaggerCollected();
+        if (pickupPromptUI != null)
+            pickupPromptUI.SetActive(false);
+
+        // GuardTracker handles objective completion and notifying ThroneRoomDoors
+        GuardTracker.Instance?.OnDaggerPickedUp();
 
         Destroy(gameObject);
     }

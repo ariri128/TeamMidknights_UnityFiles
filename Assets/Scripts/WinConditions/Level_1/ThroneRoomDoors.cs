@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ThroneRoomDoors : MonoBehaviour
 {
@@ -17,9 +18,17 @@ public class ThroneRoomDoors : MonoBehaviour
     [Tooltip("The name of the trigger parameter in your door Animator to play the open animation.")]
     public string openAnimationTrigger = "Open";
 
+    [Header("Doors Open Panel")]
+    [Tooltip("Panel that pops up when all objectives are complete and doors open.")]
+    public GameObject doorsOpenPanel;
+
+    [Tooltip("How long the panel stays visible before hiding.")]
+    public float panelDisplayDuration = 3f;
+
     // Internal access flags
     private bool guardsCleared = false;
     private bool daggerCollected = false;
+    private bool narrativeCollected = false;
 
     private void Awake()
     {
@@ -45,9 +54,15 @@ public class ThroneRoomDoors : MonoBehaviour
         CheckOpenDoors();
     }
 
+    public void OnAllNarrativeCollected()
+    {
+        narrativeCollected = true;
+        CheckOpenDoors();
+    }
+
     private void CheckOpenDoors()
     {
-        if (guardsCleared && daggerCollected)
+        if (guardsCleared && daggerCollected && narrativeCollected)
         {
             OpenDoors();
         }
@@ -56,6 +71,12 @@ public class ThroneRoomDoors : MonoBehaviour
     private void OpenDoors()
     {
         Debug.Log("Throne room doors opening!");
+
+        if (doorsOpenPanel != null)
+            StartCoroutine(ShowPanelForDuration(doorsOpenPanel, panelDisplayDuration));
+
+        if (ObjectiveUpdateUI.Instance != null)
+            ObjectiveUpdateUI.Instance.ShowMessage("The Throne Room is Now Open");
 
         if (useAnimation && doorAnimators.Length > 0)
         {
@@ -70,6 +91,13 @@ public class ThroneRoomDoors : MonoBehaviour
             // Deactive doors when conditions met
             SetDoorsBlocking(false);
         }
+    }
+
+    private IEnumerator ShowPanelForDuration(GameObject panel, float duration)
+    {
+        panel.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        panel.SetActive(false);
     }
 
     private void SetDoorsBlocking(bool blocking)
