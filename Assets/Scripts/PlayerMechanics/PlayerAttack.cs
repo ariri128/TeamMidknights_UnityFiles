@@ -48,6 +48,8 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void TriggerAttack() { Attack(); }
+
     private void Attack()
     {
         if (playerMana == null || !playerMana.TrySpendMana(manaCost))

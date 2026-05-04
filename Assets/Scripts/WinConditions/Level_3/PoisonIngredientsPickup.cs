@@ -44,6 +44,22 @@ public class PoisonIngredientsPickup : MonoBehaviour
     private Renderer[] renderers;
     private GameObject outlineMeshInstance;
 
+    private void OnEnable()
+    {
+        InputBridge.OnInteractPressed += OnGamepadInteract;
+    }
+
+    private void OnDisable()
+    {
+        InputBridge.OnInteractPressed -= OnGamepadInteract;
+    }
+
+    private void OnGamepadInteract()
+    {
+        if (playerInRange)
+            PickUp();
+    }
+
     private void Start()
     {
         if (playerObject != null)

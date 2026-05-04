@@ -26,6 +26,22 @@ public class FountainWaterCollect : MonoBehaviour
     private Vector3 originalScale;
     private bool isPulsing = false;
 
+    private void OnEnable()
+    {
+        InputBridge.OnInteractPressed += OnGamepadInteract;
+    }
+
+    private void OnDisable()
+    {
+        InputBridge.OnInteractPressed -= OnGamepadInteract;
+    }
+
+    private void OnGamepadInteract()
+    {
+        if (playerInRange)
+            CollectWater();
+    }
+
     private void Start()
     {
         if (playerObject != null)

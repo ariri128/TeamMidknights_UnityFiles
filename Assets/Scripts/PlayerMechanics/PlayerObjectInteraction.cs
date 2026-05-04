@@ -6,6 +6,16 @@ public class PlayerObjectInteraction : MonoBehaviour
     private InteractiveObject currentInteractable;
     private InteractiveObject openedInteractable;
 
+    private void OnEnable()
+    {
+        InputBridge.OnInteractPressed += TriggerInteract;
+    }
+
+    private void OnDisable()
+    {
+        InputBridge.OnInteractPressed -= TriggerInteract;
+    }
+
     private void Update()
     {
         /*
@@ -56,77 +66,11 @@ public class PlayerObjectInteraction : MonoBehaviour
         }
     }
 
-    private void HandleInteraction()
+    public void TriggerInteract()
     {
-        if (currentInteractable == null)
-        {
-            if (openedInteractable != null)
-            {
-                openedInteractable.ClosePopup();
-                openedInteractable = null;
-            }
-
-            return;
-        }
-
-        if (openedInteractable != null && openedInteractable != currentInteractable)
-        {
-            openedInteractable.ClosePopup();
-        }
-
-        currentInteractable.TogglePopup();
-
-        if (currentInteractable.IsOpen())
-        {
-            openedInteractable = currentInteractable;
-        }
-        else
-        {
-            openedInteractable = null;
-        }
-    }
-
-    /*
-    private InteractiveObject currentInteractable;
-    private InteractiveObject openedInteractable;
-
-    private void Update()
-    {
-        
-        if (PauseManager.IsPaused)
-        {
-            return;
-        }
-        
-
+        // Ensure closest interactable is up to date before handling
         FindClosestInteractable();
-
-        if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame)
-        {
-            HandleInteraction();
-        }
-    }
-
-    private void FindClosestInteractable()
-    {
-        InteractiveObject[] interactables = FindObjectsByType<InteractiveObject>(FindObjectsSortMode.None);
-
-        currentInteractable = null;
-        float closestDistance = Mathf.Infinity;
-
-        for (int i = 0; i < interactables.Length; i++)
-        {
-            if (interactables[i].IsPlayerInRange(transform))
-            {
-                float distance = Vector3.Distance(transform.position, interactables[i].transform.position);
-
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    currentInteractable = interactables[i];
-                }
-            }
-        }
+        HandleInteraction();
     }
 
     private void HandleInteraction()
@@ -158,5 +102,4 @@ public class PlayerObjectInteraction : MonoBehaviour
             openedInteractable = null;
         }
     }
-    */
 }

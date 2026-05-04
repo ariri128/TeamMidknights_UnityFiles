@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour
     public float moveSmoothness = 8f;
     public float rotateSmoothness = 10f;
 
+    public void SetGamepadLookInput(Vector2 input) { gamepadLook = input; }
+
     [Header("Camera Collision")]
     [Tooltip("Layers the camera will collide with. Set to Default, Wall, Floor etc.")]
     public LayerMask collisionLayers = ~0;
@@ -28,6 +30,7 @@ public class CameraController : MonoBehaviour
     private float yaw;
     private float pitch;
     private Vector3 currentVelocity;
+    private Vector2 gamepadLook;
 
     private void Start()
     {
@@ -128,12 +131,14 @@ public class CameraController : MonoBehaviour
 
     private void HandleMouseLook()
     {
-        if (Mouse.current == null)
-        {
-            return;
-        }
+        Vector2 delta = Vector2.zero;
 
-        Vector2 delta = Mouse.current.delta.ReadValue();
+        // Mouse input
+        if (Mouse.current != null)
+            delta = Mouse.current.delta.ReadValue();
+
+        // Gamepad right stick — use higher multiplier since stick is -1 to 1 not pixels
+        delta += gamepadLook * 5f;
 
         yaw += delta.x * mouseSensitivity;
         pitch -= delta.y * mouseSensitivity;

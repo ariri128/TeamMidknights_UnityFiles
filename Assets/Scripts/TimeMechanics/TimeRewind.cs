@@ -65,6 +65,8 @@ public class TimeRewind : MonoBehaviour
         }
     }
 
+    public void TriggerRewind() { TryRewind(); }
+
     private void TryRewind()
     {
         if (playerHealth == null || playerHealth.IsDead())
@@ -88,10 +90,6 @@ public class TimeRewind : MonoBehaviour
         float teleportDelay = 0f;
         if (playerAnimation != null)
             teleportDelay = playerAnimation.PlayReverseTime();
-
-        //Added in sound here!
-        Debug.Log("Played Rewind Sound");
-        AudioManager.Instance.Play(AudioManager.SoundType.RewindTime);
 
         StartCoroutine(RewindAfterDelay(teleportDelay));
 

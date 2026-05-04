@@ -38,6 +38,7 @@ public class ObjectivesPanelManager : MonoBehaviour
 
     private void OnEnable()
     {
+
         if (alreadyOpened) return;
 
         if (!startHasRun) return;

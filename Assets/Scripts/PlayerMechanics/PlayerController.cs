@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current == null || cameraTransform == null)
+        if (cameraTransform == null)
         {
             return;
         }
@@ -43,10 +43,22 @@ public class PlayerController : MonoBehaviour
 
         if (canMove)
         {
-            if (Keyboard.current.aKey.isPressed) horizontal -= 1f;
-            if (Keyboard.current.dKey.isPressed) horizontal += 1f;
-            if (Keyboard.current.wKey.isPressed) vertical += 1f;
-            if (Keyboard.current.sKey.isPressed) vertical -= 1f;
+            // Keyboard input
+            if (Keyboard.current != null)
+            {
+                if (Keyboard.current.aKey.isPressed) horizontal -= 1f;
+                if (Keyboard.current.dKey.isPressed) horizontal += 1f;
+                if (Keyboard.current.wKey.isPressed) vertical += 1f;
+                if (Keyboard.current.sKey.isPressed) vertical -= 1f;
+            }
+
+            // Gamepad left stick — adds on top of keyboard
+            horizontal += gamepadMove.x;
+            vertical += gamepadMove.y;
+
+            // Clamp so combined input doesn't exceed 1
+            horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+            vertical = Mathf.Clamp(vertical, -1f, 1f);
         }
 
         Vector3 cameraForward = cameraTransform.forward;
@@ -65,7 +77,11 @@ public class PlayerController : MonoBehaviour
             playerAnimation.SetRunning(canMove && moveDirection.magnitude > 0.1f);
         }
 
-        if (canMove && Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
+        bool jumpPressed = (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+                         || gamepadJumpPressed;
+        gamepadJumpPressed = false; // consume the flag
+
+        if (canMove && jumpPressed && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
@@ -98,6 +114,15 @@ public class PlayerController : MonoBehaviour
             );
         }
     }
+
+    // ── Gamepad input passthrough ──
+    private Vector2 gamepadMove;
+    private Vector2 gamepadLook;
+    private bool gamepadJumpPressed;
+
+    public void SetGamepadMoveInput(Vector2 input) { gamepadMove = input; }
+    public void SetGamepadLookInput(Vector2 input) { gamepadLook = input; }
+    public void TriggerJump() { gamepadJumpPressed = true; }
 
     public void DisableMovement()
     {
