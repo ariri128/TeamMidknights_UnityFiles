@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7665335512966440950}
   - component: {fileID: 857300581341619071}
   - component: {fileID: 5990679247278794988}
+  - component: {fileID: 3674834337123503369}
   - component: {fileID: 4516939781425546592}
   - component: {fileID: -6609465612279117886}
   - component: {fileID: -3031026501336817121}
@@ -200,6 +201,22 @@ MonoBehaviour:
   cooldownDuration: 10
   guardSpeedMultiplier: 0.08
   manaCost: 10
+  timeSlowVignette: {fileID: 0}
+--- !u!114 &3674834337123503369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445776840662883021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86cc495708194f9ca9d512e023b229c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeSlowVignette
+  postProcessVolume: {fileID: 0}
+  maxIntensity: 0.25
+  fadeSpeed: 3
 --- !u!114 &4516939781425546592
 MonoBehaviour:
   m_ObjectHideFlags: 0

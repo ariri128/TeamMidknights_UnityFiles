@@ -14,14 +14,8 @@ public class TimeSlow : MonoBehaviour
 
     public bool IsSlowActive => isSlowActive;
 
-    public bool IsEntryAnimationPlaying
-    {
-        get
-        {
-            PlayerAnimationController anim = GetComponent<PlayerAnimationController>();
-            return anim != null && anim.IsPauseTimePlaying();
-        }
-    }
+    [Tooltip("Assign the TimeSlowVignette script on the player.")]
+    public TimeSlowVignette timeSlowVignette;
 
     private PlayerMana playerMana;
 
@@ -74,15 +68,8 @@ public class TimeSlow : MonoBehaviour
     {
         isSlowActive = true;
 
-        PlayerAnimationController playerAnimation = GetComponent<PlayerAnimationController>();
-        if (playerAnimation != null)
-        {
-            playerAnimation.PlayPauseTime();
-
-             //Added in sound here!
-            Debug.Log("Played Time slow Sound");
-            AudioManager.Instance.Play(AudioManager.SoundType.SlowDownTime);
-        }
+        if (timeSlowVignette != null)
+            timeSlowVignette.SetActive(true);
 
         GuardAI[] guards = FindObjectsByType<GuardAI>(FindObjectsSortMode.None);
 
@@ -110,6 +97,9 @@ public class TimeSlow : MonoBehaviour
 
         isSlowActive = false;
         cooldownTimer = cooldownDuration;
+
+        if (timeSlowVignette != null)
+            timeSlowVignette.SetActive(false);
 
         Debug.Log("Time slow ended.");
     }

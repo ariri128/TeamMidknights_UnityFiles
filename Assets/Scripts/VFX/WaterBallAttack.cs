@@ -49,12 +49,6 @@ public class WaterBallAttack : MonoBehaviour
             return;
         }
 
-        // Block firing while the PauseTime entry animation is still playing
-        if (timeSlow.IsEntryAnimationPlaying)
-        {
-            return;
-        }
-
         if (waterBallPrefab == null || waterBallSpawnPoint == null || mainCamera == null)
         {
             return;
@@ -74,10 +68,6 @@ public class WaterBallAttack : MonoBehaviour
         {
             playerAnimation.PlayLargeAttack();
         }
-
-        //Added in sound here!
-        Debug.Log("Played Water Ball Sound");
-        AudioManager.Instance.Play(AudioManager.SoundType.WaterPowerBigBlast);
 
         Vector2 aimPosition;
 
