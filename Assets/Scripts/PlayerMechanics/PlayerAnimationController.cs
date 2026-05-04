@@ -54,6 +54,7 @@ public class PlayerAnimationController : MonoBehaviour
     private int hashIsPauseTime;
     private int hashJump;
     private int hashIsGrounded;
+    private int hashDive;
 
     private void Awake()
     {
@@ -70,6 +71,7 @@ public class PlayerAnimationController : MonoBehaviour
         hashIsPauseTime = Animator.StringToHash("isPauseTime");
         hashJump = Animator.StringToHash("Jump");
         hashIsGrounded = Animator.StringToHash("isGrounded");
+        hashDive = Animator.StringToHash("isDive");
     }
 
     public void SetRunning(bool value)
@@ -234,6 +236,13 @@ public class PlayerAnimationController : MonoBehaviour
 
         StartCoroutine(PlayBoolForDuration(hashIsReverse, reverseTimeDuration));
         return reverseTimeAnimDelay;
+    }
+
+    public void PlayDive()
+    {
+        if (animator == null) return;
+        animator.SetBool(hashIsRunning, false);
+        StartCoroutine(PlayBoolForDuration(hashDive, 0.47f));
     }
 
     public void PlayDying()

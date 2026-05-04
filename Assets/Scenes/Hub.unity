@@ -988,9 +988,13 @@ PrefabInstance:
     - {fileID: 4516939781425546592, guid: 5649fb169809742f5a708460d23befdc, type: 3}
     - {fileID: -6609465612279117886, guid: 5649fb169809742f5a708460d23befdc, type: 3}
     - {fileID: -3031026501336817121, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+    - {fileID: 7943524584960520910, guid: 5649fb169809742f5a708460d23befdc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3445776840662883021, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1600517456}
     - targetCorrespondingSourceObject: {fileID: 3445776840662883021, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1600517450}
@@ -6931,13 +6935,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275225963}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6181873, y: -0.048110563, z: 0.04733648, w: 0.7831278}
-  m_LocalPosition: {x: -54.57615, y: 16.63351, z: -51.793118}
+  m_LocalRotation: {x: 0.14978436, y: -0.028349824, z: 0.0002656607, w: 0.9883122}
+  m_LocalPosition: {x: -49.6, y: 2.8, z: -54.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.222, y: -3.359, z: -0.478}
 --- !u!114 &275225967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11412,6 +11416,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97e8bf25ada0245bba227c5d37733f, type: 3}
+--- !u!114 &1187463767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5026672330199506036, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+  m_PrefabInstance: {fileID: 83450803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600517445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd850607fc6d046218fc411b6064e3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
+--- !u!114 &1187463768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5194275956727887941, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+  m_PrefabInstance: {fileID: 83450803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600517445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93506f7256e24e2e970e84ebde9cbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1001 &1196901678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19438,6 +19464,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1600517456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600517445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc67f7a1b81c14ec99d136e9c454e4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HubDiveCutscene
+  cameraController: {fileID: 275225968}
+  playerAnimController: {fileID: 1187463767}
+  playerController: {fileID: 1187463768}
+  cameraSwingDuration: 2
+  diveDelay: 0
+  diveDuration: 1.05
+  diveCameraDepth: 2
+  diveCameraSpeed: 4
 --- !u!1001 &1604134630
 PrefabInstance:
   m_ObjectHideFlags: 0
