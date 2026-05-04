@@ -42,6 +42,8 @@ public class TimeSlow : MonoBehaviour
         }
     }
 
+    public void TriggerSlow() { TryActivateTimeSlow(); }
+
     private void TryActivateTimeSlow()
     {
         if (isSlowActive)

@@ -13,6 +13,24 @@ public class SwordPickup : MonoBehaviour
     public GameObject playerObject;
 
     private Transform player;
+    private bool playerInRange = false;
+
+    private void OnEnable()
+    {
+        InputBridge.OnInteractPressed += OnGamepadInteract;
+    }
+
+    private void OnDisable()
+    {
+        InputBridge.OnInteractPressed -= OnGamepadInteract;
+    }
+
+    private void OnGamepadInteract()
+    {
+        // Mirror F key behavior for gamepad
+        if (playerInRange)
+            PickUp();
+    }
 
     private void Start()
     {
@@ -29,12 +47,12 @@ public class SwordPickup : MonoBehaviour
     {
         if (player == null) return;
 
-        bool inRange = Vector3.Distance(transform.position, player.position) <= pickupRadius;
+        playerInRange = Vector3.Distance(transform.position, player.position) <= pickupRadius;
 
         if (pickupPromptUI != null)
-            pickupPromptUI.SetActive(inRange);
+            pickupPromptUI.SetActive(playerInRange);
 
-        if (inRange && Keyboard.current.fKey.wasPressedThisFrame)
+        if (playerInRange && Keyboard.current.fKey.wasPressedThisFrame)
             PickUp();
     }
 

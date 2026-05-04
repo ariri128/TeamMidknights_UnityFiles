@@ -15,6 +15,23 @@ public class DaggerPickup : MonoBehaviour
     private Transform player;
     private bool playerInRange = false;
 
+    private void OnEnable()
+    {
+        InputBridge.OnInteractPressed += OnGamepadInteract;
+    }
+
+    private void OnDisable()
+    {
+        InputBridge.OnInteractPressed -= OnGamepadInteract;
+    }
+
+    private void OnGamepadInteract()
+    {
+        // Mirror F key behavior for gamepad
+        if (playerInRange)
+            PickUp();
+    }
+
     private void Start()
     {
         if (playerObject != null)

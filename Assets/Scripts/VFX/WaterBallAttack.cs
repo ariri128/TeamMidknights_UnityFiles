@@ -42,6 +42,8 @@ public class WaterBallAttack : MonoBehaviour
         }
     }
 
+    public void TriggerWaterBall() { TryThrowWaterBall(); }
+
     private void TryThrowWaterBall()
     {
         if (timeSlow == null || !timeSlow.IsSlowActive)

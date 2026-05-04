@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: -3031026501336817121}
   - component: {fileID: 5026672330199506036}
   - component: {fileID: 7943524584960520910}
+  - component: {fileID: 3528408028071108648}
   m_Layer: 10
   m_Name: PlayerRoot
   m_TagString: Untagged
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHP: 300
+  godMode: 0
   loseDelay: 2.3
   loseLevelLoader: {fileID: 0}
   cameraController: {fileID: 0}
@@ -168,6 +170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMana
   maxMana: 200
+  infiniteMana: 0
+  outOfManaPanel: {fileID: 0}
+  outOfManaPanelDuration: 2.5
 --- !u!114 &857300581341619071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +317,26 @@ MonoBehaviour:
   riseDuration: 2
   swingToBackDuration: 2
   settleDelay: 1
+--- !u!114 &3528408028071108648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445776840662883021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893116a1cbb9f419eb39f227dd7ecb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GamepadInputHandler
+  inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  playerController: {fileID: 5194275956727887941}
+  playerAttack: {fileID: 4516939781425546592}
+  waterBallAttack: {fileID: -6609465612279117886}
+  timeSlow: {fileID: 5990679247278794988}
+  timeRewind: {fileID: 857300581341619071}
+  playerObjectInteraction: {fileID: -3031026501336817121}
+  pauseManager: {fileID: 0}
 --- !u!1001 &298469940463078823
 PrefabInstance:
   m_ObjectHideFlags: 0
