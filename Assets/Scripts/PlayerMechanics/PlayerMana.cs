@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMana : MonoBehaviour
 {
@@ -6,6 +7,13 @@ public class PlayerMana : MonoBehaviour
 
     [Tooltip("If true, mana is never consumed (used in tutorial).")]
     public bool infiniteMana = false;
+
+    [Header("Out of Mana Panel")]
+    [Tooltip("Panel to show briefly when the player runs out of mana.")]
+    public GameObject outOfManaPanel;
+
+    [Tooltip("How long the panel stays visible.")]
+    public float outOfManaPanelDuration = 2.5f;
 
     private int currentMana;
     private bool outOfManaMessageShown = false;
@@ -67,16 +75,22 @@ public class PlayerMana : MonoBehaviour
     private void ShowOutOfManaMessageOnce()
     {
         if (outOfManaMessageShown)
-        {
             return;
-        }
 
         outOfManaMessageShown = true;
 
         if (ObjectiveUpdateUI.Instance != null)
-        {
             ObjectiveUpdateUI.Instance.ShowMessage("Out of mana. Refill it at the fountain.");
-        }
+
+        if (outOfManaPanel != null)
+            StartCoroutine(ShowOutOfManaPanelRoutine());
+    }
+
+    private IEnumerator ShowOutOfManaPanelRoutine()
+    {
+        outOfManaPanel.SetActive(true);
+        yield return new WaitForSeconds(outOfManaPanelDuration);
+        outOfManaPanel.SetActive(false);
     }
 
     public bool IsFull()

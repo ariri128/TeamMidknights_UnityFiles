@@ -26927,6 +26927,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3422037031961423146, guid: cc2e8b64fe0cd3d45ad505e3c07203df, type: 3}
   m_PrefabInstance: {fileID: 252791578}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &253135429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328968132199826813, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650881750891866095, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
+      propertyPath: m_Name
+      value: CollisionBoxes
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8217453b36384a808e66624dd7ff78e, type: 3}
 --- !u!1001 &254511519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119033,6 +119090,10 @@ MonoBehaviour:
   maxPitch: 55
   moveSmoothness: 8
   rotateSmoothness: 10
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 1015
+  collisionOffset: 0.2
 --- !u!1001 &1090117247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -245789,6 +245850,10 @@ PrefabInstance:
       propertyPath: maxMana
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 7665335512966440950, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: outOfManaPanel
+      value: 
+      objectReference: {fileID: 5890829765918624724}
     - target: {fileID: 7943524584960520910, guid: 5649fb169809742f5a708460d23befdc, type: 3}
       propertyPath: cameraController
       value: 
@@ -267145,7 +267210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4310996461622896013, guid: f703070d9af394f78adb342d71f80914, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6181882124234614754, guid: f703070d9af394f78adb342d71f80914, type: 3}
       propertyPath: m_Pivot.x
@@ -279173,7 +279238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425210673799678557, guid: e407dc492aa89436ead4bb90c6a6eb44, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -286360,6 +286425,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 759135256}
     m_Modifications:
+    - target: {fileID: 2216728072552759196, guid: 38899874a4cfc46c49d962779a2e599a, type: 3}
+      propertyPath: m_text
+      value: 'Out of Mana
+
+        Refill at Fountain'
+      objectReference: {fileID: 0}
     - target: {fileID: 2901461251109664618, guid: 38899874a4cfc46c49d962779a2e599a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -286449,6 +286520,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38899874a4cfc46c49d962779a2e599a, type: 3}
+--- !u!1 &5890829765918624724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3079623103927458212, guid: 38899874a4cfc46c49d962779a2e599a, type: 3}
+  m_PrefabInstance: {fileID: 5890829765918624723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &5892710774109027662
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -312214,6 +312290,7 @@ SceneRoots:
   - {fileID: 1258068682}
   - {fileID: 996296536}
   - {fileID: 787348371979475762}
+  - {fileID: 253135429}
   - {fileID: 616295738}
   - {fileID: 931219090}
   - {fileID: 1149434202}
