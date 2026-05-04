@@ -43,23 +43,10 @@ public class GeneralDecisionTrigger : MonoBehaviour
         if (returnFromSpareButton != null) returnFromSpareButton.onClick.AddListener(ReturnToHub);
     }
 
-    public void EnableTrigger()
-    {
-        GetComponent<Collider>().enabled = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
+    public void ShowPanel()
     {
         if (triggered) return;
-        if (other.gameObject != playerObject) return;
-
         triggered = true;
-        ShowDecisionPanel();
-    }
-
-    private void ShowDecisionPanel()
-    {
-        Time.timeScale = 0f;
 
         foreach (GameObject ui in uiElementsToHide)
             if (ui != null) ui.SetActive(false);
@@ -90,6 +77,16 @@ public class GeneralDecisionTrigger : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Re-enable player and camera before leaving
+        if (playerObject != null)
+        {
+            var pc = playerObject.GetComponent<PlayerController>();
+            if (pc != null) pc.enabled = true;
+        }
+
+        CameraController cam = Camera.main?.GetComponent<CameraController>();
+        if (cam != null) cam.enabled = true;
 
         if (levelLoader != null)
             levelLoader.LoadNextLevel();

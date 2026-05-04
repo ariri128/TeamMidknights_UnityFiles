@@ -27,45 +27,28 @@ public class GeneralAI : MonoBehaviour
     [Tooltip("How far the player can get before the General gives up and returns to patrolling.")]
     public float leashRadius = 15f;
 
-    [Header("Attack / Bumper Car")]
-    [Tooltip("Distance at which the General deals damage and gets knocked back.")]
-    public float attackRadius = 1.5f;
+    [Header("Attack")]
+    [Tooltip("Distance at which the General stops and deals damage. Larger than guards so he doesn't crowd the player.")]
+    public float attackRadius = 3.0f;
 
-    [Tooltip("Damage dealt to the player on each bump.")]
+    [Tooltip("Damage dealt to the player on each attack.")]
     public int damageAmount = 35;
 
-    [Tooltip("Seconds between each bump attack.")]
+    [Tooltip("Seconds between each attack.")]
     public float attackCooldown = 1.2f;
 
-    [Tooltip("How hard the General is knocked back after bumping the player.")]
-    public float knockbackForce = 6f;
-
-    [Tooltip("Seconds the General is knocked back before resuming the chase.")]
-    public float knockbackDuration = 0.4f;
-
     [Header("Death")]
-    [Tooltip("The sword prefab to spawn when the General dies (separate prefab with Rigidbody + Collider).")]
-    public GameObject swordDropPrefab;
+    [Tooltip("Seconds after falling before decision panel shows.")]
+    public float decisionTriggerDelay = 3f;
 
-    [Tooltip("The Transform on the General's hand where the sword will spawn from.")]
-    public Transform swordHandTransform;
-
-    [Tooltip("Drag the sm_sword child GameObject here so it gets hidden when the drop prefab spawns.")]
-    public GameObject heldSword;
-
-    [Tooltip("How far the General tilts backward when falling. 80-90 degrees looks natural.")]
-    public float fallAngle = 85f;
-
-    [Tooltip("How fast the General tips over on death.")]
-    public float fallSpeed = 3f;
-
-    [Tooltip("Seconds after death before the player can trigger the decision panel. Gives time to pick up the sword.")]
-    public float decisionTriggerDelay = 6f;
+    [Tooltip("Seconds after death before player movement stops and decision panel delay begins.")]
+    public float playerStopDelay = 0.5f;
 
     private NavMeshAgent agent;
     private Rigidbody rb;
+    private GeneralAnimationController generalAnim;
 
-    private enum GeneralState { Patrol, Chase, Knockback, Dead }
+    private enum GeneralState { Patrol, Chase, Dead }
     private GeneralState currentState = GeneralState.Patrol;
 
     private Transform currentPatrolTarget;
@@ -83,10 +66,14 @@ public class GeneralAI : MonoBehaviour
 
         // Keeps Rigidbody from fighting NavMeshAgent during normal movement
         rb.isKinematic = true;
+        generalAnim = GetComponent<GeneralAnimationController>();
 
         normalSpeed = agent.speed;
         normalAngularSpeed = agent.angularSpeed;
         normalAcceleration = agent.acceleration;
+
+        generalAnim = GetComponent<GeneralAnimationController>();
+        Debug.Log("GeneralAnim found: " + (generalAnim != null));
     }
 
     private void Start()
@@ -112,14 +99,15 @@ public class GeneralAI : MonoBehaviour
                 HandleChase(distanceToPlayer);
                 break;
 
-            case GeneralState.Knockback:
-                break;
         }
     }
 
     private void HandlePatrol()
     {
         if (currentPatrolTarget == null) return;
+
+        generalAnim?.SetWalking(true);
+        generalAnim?.SetAttacking(false);
 
         // If the player comes back within range, resume chasing
         if (player != null && Vector3.Distance(transform.position, player.position) <= chaseRadius)
@@ -140,7 +128,6 @@ public class GeneralAI : MonoBehaviour
 
     private void HandleChase(float distanceToPlayer)
     {
-        // If the player has escaped far enough, give up and go back to patrolling
         if (distanceToPlayer > leashRadius)
         {
             currentState = GeneralState.Patrol;
@@ -149,14 +136,24 @@ public class GeneralAI : MonoBehaviour
             return;
         }
 
+        // Stop at attackRadius — don't crowd the player
+        agent.stoppingDistance = attackRadius;
         agent.SetDestination(player.position);
+
+        if (distanceToPlayer <= attackRadius)
+            generalAnim?.SetAttacking(true);
+        else
+        {
+            generalAnim?.SetAttacking(false);
+            generalAnim?.SetWalking(true);
+        }
 
         attackTimer += Time.deltaTime;
 
         if (distanceToPlayer <= attackRadius && attackTimer >= attackCooldown)
         {
             attackTimer = 0f;
-            BumpPlayer();
+            DealDamage();
         }
     }
 
@@ -170,37 +167,11 @@ public class GeneralAI : MonoBehaviour
         return distA < distB ? patrolPointA : patrolPointB;
     }
 
-    private void BumpPlayer()
+    private void DealDamage()
     {
-        // Deal damage
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
             playerHealth.TakeDamage(damageAmount);
-
-        // Knock the General back
-        StartCoroutine(KnockbackRoutine());
-    }
-
-    private IEnumerator KnockbackRoutine()
-    {
-        currentState = GeneralState.Knockback;
-        agent.ResetPath();
-        agent.enabled = false;
-
-        // Push backward using Rigidbody for a frame
-        rb.isKinematic = false;
-        Vector3 knockDir = (transform.position - player.position).normalized;
-        knockDir.y = 0f;
-        rb.AddForce(knockDir * knockbackForce, ForceMode.Impulse);
-
-        yield return new WaitForSeconds(knockbackDuration);
-
-        rb.linearVelocity = Vector3.zero;
-        rb.isKinematic = true;
-        agent.enabled = true;
-        agent.Warp(transform.position); // Snap agent back to navmesh position
-
-        currentState = GeneralState.Chase;
     }
 
     public void OnPlayerEnteredRoom()
@@ -219,48 +190,43 @@ public class GeneralAI : MonoBehaviour
         agent.enabled = false;
         rb.isKinematic = false;
 
-        // Hide the held sword and spawn the drop prefab
-        if (heldSword != null) heldSword.SetActive(false);
-        if (swordDropPrefab != null && swordHandTransform != null)
-        {
-            Instantiate(swordDropPrefab, swordHandTransform.position, swordHandTransform.rotation);
-        }
-        else if (swordDropPrefab != null)
-        {
-            Instantiate(swordDropPrefab, transform.position + Vector3.up, Quaternion.identity);
-        }
-
-        StartCoroutine(FallBackward());
+        StartCoroutine(DeathSequence());
     }
 
-    private IEnumerator FallBackward()
+    private IEnumerator DeathSequence()
     {
-        Quaternion startRotation = transform.rotation;
-        Quaternion fallRotation = Quaternion.Euler(fallAngle, transform.eulerAngles.y, transform.eulerAngles.z);
+        // Play death animation
+        generalAnim?.PlayDeath();
 
+        // Wait for death animation to complete
+        float timeout = 6f;
         float elapsed = 0f;
-        float duration = 1f / fallSpeed;
-
-        while (elapsed < duration)
+        while (elapsed < timeout)
         {
+            if (generalAnim != null && generalAnim.IsDeathComplete()) break;
             elapsed += Time.deltaTime;
-            transform.rotation = Quaternion.Lerp(startRotation, fallRotation, elapsed / duration);
             yield return null;
         }
 
-        transform.rotation = fallRotation;
+        // Brief delay then stop player movement (camera still works)
+        yield return new WaitForSeconds(playerStopDelay);
 
-        // Notify the decision trigger that the General is down
+        PlayerController pc = player?.GetComponent<PlayerController>();
+        if (pc != null) pc.enabled = false;
+
+        // Wait for decision delay then show panel
+        yield return new WaitForSeconds(decisionTriggerDelay);
+
+        // Stop camera too when panel shows
+        CameraController cam = Camera.main?.GetComponent<CameraController>();
+        if (cam != null) cam.enabled = false;
+
         GeneralDecisionTrigger decisionTrigger = GetComponentInChildren<GeneralDecisionTrigger>();
         if (decisionTrigger != null)
-            StartCoroutine(EnableDecisionTriggerAfterDelay(decisionTrigger));
+            decisionTrigger.ShowPanel();
     }
 
-    private IEnumerator EnableDecisionTriggerAfterDelay(GeneralDecisionTrigger trigger)
-    {
-        yield return new WaitForSeconds(decisionTriggerDelay);
-        trigger.EnableTrigger();
-    }
+
 
     public void ApplySlow(float speedMultiplier)
     {
