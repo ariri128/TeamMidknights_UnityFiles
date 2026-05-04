@@ -20,17 +20,9 @@ public class EndingTracker : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // ──────────────────────────────────────────────
-    // Called from each level's decision panel
-    // ──────────────────────────────────────────────
-
     public void SetKingChoice(bool killed) { kingChoice = killed; }
     public void SetGeneralChoice(bool killed) { generalChoice = killed; }
     public void SetPrinceChoice(bool killed) { princeChoice = killed; }
-
-    // ──────────────────────────────────────────────
-    // Status checks
-    // ──────────────────────────────────────────────
 
     public bool AllChoicesMade()
     {
@@ -41,11 +33,6 @@ public class EndingTracker : MonoBehaviour
     public bool GeneralKilled => generalChoice.HasValue && generalChoice.Value;
     public bool PrinceKilled => princeChoice.HasValue && princeChoice.Value;
 
-    /// <summary>
-    /// Returns ending index 0-7 based on kill/spare combinations.
-    /// King = bit 2, General = bit 1, Prince = bit 0
-    /// 0 = all spared, 7 = all killed
-    /// </summary>
     public int GetEndingIndex()
     {
         int index = 0;
@@ -54,10 +41,6 @@ public class EndingTracker : MonoBehaviour
         if (PrinceKilled) index |= 1;
         return index;
     }
-
-    // ──────────────────────────────────────────────
-    // Reset (called when returning to Main Menu)
-    // ──────────────────────────────────────────────
 
     public void ResetAllChoices()
     {
