@@ -37310,7 +37310,6 @@ Transform:
   - {fileID: 1811832315}
   - {fileID: 1762752389}
   - {fileID: 1670996906}
-  - {fileID: 697902491}
   - {fileID: 1270510094}
   - {fileID: 709250675}
   - {fileID: 1807697488}
@@ -76759,52 +76758,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6732525228329167141, guid: 08ddb32ba6f14534e8cf971e26adc883, type: 3}
   m_PrefabInstance: {fileID: 697415184}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &697902490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 697902491}
-  - component: {fileID: 697902492}
-  m_Layer: 0
-  m_Name: ObjectiveUpdateManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &697902491
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697902490}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 464.11316, y: 0.00001, z: 29560.805}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 338138237}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697902492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697902490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51cd032d99f1d4dbdb166daa41ed80e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveUpdateUI
-  updateText: {fileID: 360527740}
-  messageDuration: 1.5
 --- !u!1 &698624979
 GameObject:
   m_ObjectHideFlags: 0
@@ -77459,7 +77412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectivesPanelManager
   objectivesPanel: {fileID: 1331454559}
   minimizedPanel: {fileID: 1497357823}
-  showDelay: 1.2
+  showDelay: 10
 --- !u!1 &709346610
 GameObject:
   m_ObjectHideFlags: 0
@@ -249224,6 +249177,14 @@ PrefabInstance:
       propertyPath: maxMana
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 7943524584960520910, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1087918638}
+    - target: {fileID: 7943524584960520910, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: objectivesPanelManager
+      value: 
+      objectReference: {fileID: 709250676}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

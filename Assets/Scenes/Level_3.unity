@@ -78392,7 +78392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectivesPanelManager
   objectivesPanel: {fileID: 156776042}
   minimizedPanel: {fileID: 1125779327}
-  showDelay: 1.2
+  showDelay: 10
 --- !u!1 &709346610
 GameObject:
   m_ObjectHideFlags: 0
@@ -251445,6 +251445,14 @@ PrefabInstance:
       propertyPath: maxMana
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 7943524584960520910, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1087918638}
+    - target: {fileID: 7943524584960520910, guid: 5649fb169809742f5a708460d23befdc, type: 3}
+      propertyPath: objectivesPanelManager
+      value: 
+      objectReference: {fileID: 709250676}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

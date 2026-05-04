@@ -101,13 +101,21 @@ public class LevelRock : MonoBehaviour
     {
         HidePanel();
 
-        if (splashPortal != null)
-            splashPortal.ActivateForLevel(sceneName);
-
+        // Hide portal prompt — cutscene handles everything now
         if (portalPromptUI != null)
-            portalPromptUI.SetActive(true);
+            portalPromptUI.SetActive(false);
 
-        Debug.Log($"Splash portal activated for {sceneName}. Jump in to begin!");
+        // Trigger the dive cutscene — it loads the scene after the animation
+        HubDiveCutscene cutscene = playerObject?.GetComponent<HubDiveCutscene>();
+        if (cutscene != null)
+            cutscene.TriggerDive(sceneName);
+        else
+        {
+            // Fallback: old portal behavior if cutscene not set up
+            if (splashPortal != null)
+                splashPortal.ActivateForLevel(sceneName);
+            Debug.LogWarning("LevelRock: HubDiveCutscene not found on player.");
+        }
     }
 
     private void OnNoClicked()
